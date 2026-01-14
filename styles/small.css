@@ -1,0 +1,9 @@
+/* There is no horizontal scrolling in views between 320px to 1200px wide. */
+/* Text does not touch the edge of the screen causing a visual tangent error. */
+/* Any text overlays on images, other elements, or other text/content is legible and does not overflow in smaller views. */
+/* That there is no twitching in the navigation on hover. */
+/* Images are not squished nor distorted as the page is resized. */
+/* Images are not oversized causing pixelation. */
+/* Use your own color scheme and typography choices. */
+/* Use the Google Fonts API to select one font family to use on this page. */
+/* Your design cannot just be a simple one column layout (default flow layout) in all views in order to warrant full credit consideration. */
