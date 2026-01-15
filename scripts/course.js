@@ -77,49 +77,63 @@ const courses = [
         completed: true
     }
 ]
-// // Modify the courses array content in your script file by changing the completed property to true if you have completed a course.
-// Dynamically display all the courses in the certificate section as shown in the example above. The courses that you have completed must be marked in a different way versus those that you have not completed. Use your page color scheme. The page should adjust automatically if the data source changes.
-
-/* 
-    TODO: Identify the element that we need to insert the data into.
-    TODO: Design the structure of the element that we are building.
-    TODO: Attach designed element into the identified element.
-*/
-
-
-
-// Handling filter generation
-let arrayOfUniqueSubjects = [ "All", ...new Set(courses.map(object => object.subject)) ]
-let coursesFilter = document.getElementById("coursesFilter")
-arrayOfUniqueSubjects.forEach(value => {
-    let newDiv = document.createElement("div");
-    newDiv.textContent = value
-    coursesFilter.appendChild(newDiv)
-})
-
-// Handling filter events
-
-
-// Handling course card generation
-
-// TODO: this function needs to have a visual red indicator for subjects not completed
-// TODO: this function needs to tally the total number of credits required.
-let arrayOfCourseNames = courses.map(object => `${object.subject} ${object.number}`)
+// All Courses
+let arrayOfAllCourseNames = courses.map(object => `${object.subject} ${object.number}`)
+// Where Course Output is going
 let coursesElement = document.getElementById("courses")
-arrayOfCourseNames.forEach(value => {
-    let newDiv = document.createElement("div");
-    newDiv.textContent = value
-    coursesElement.appendChild(newDiv)
+// Unique Subjects
+let arrayOfUniqueSubjects = [ "All Courses", ...new Set(courses.map(object => `${object.subject} Courses`)) ]
+// Where Triggers and Filter's are going
+let coursesFilter = document.getElementById("coursesFilter")
+
+function generateCourses(uniqueSubject){
+    let newCoursesArray = courses
+    if(uniqueSubject !== "All Courses"){
+        newCoursesArray = courses.filter((object)=>object.subject == uniqueSubject.split(' ')[0])
+    } 
+    let children = []
+    newCoursesArray.map((object)=>{
+        let newDiv = document.createElement("div");
+        newDiv.textContent = `${object.subject} ${object.number}`
+        if(object.completed){
+            newDiv.style.backgroundColor = "green";
+        } else {
+            newDiv.style.backgroundColor = "red";
+        }
+
+        children.push(newDiv)
+    })
+
+    coursesElement.replaceChildren(...children)
+}
+
+
+function generateFilter(uniqueSubject){
+    let newFilter = document.createElement("div");
+    newFilter.addEventListener("click", ()=>{
+        generateCourses(uniqueSubject);
+    })
+    newFilter.textContent = uniqueSubject
+    coursesFilter.appendChild(newFilter)
+}
+
+arrayOfUniqueSubjects.forEach((uniqueSubject, index) => {
+    generateFilter(uniqueSubject);
 })
 
+
+// TODO: I want this to generate all of the outcomes all at once, and store the outcomes in memory. So they are not being rebuilt every time a user clicks on the screen. It is just fetching it from memory, and updating the DOM. Adjust the function to do that.
 
 /*
 
-Using buttons that listen for the click event, allow the user to select to display All Courses, WDD Courses, or CSE Courses. Hint: Use the array filter method.
+    Using buttons that listen for the click event, allow the user to select to display All Courses, WDD Courses, or CSE Courses. Hint: Use the array filter method.
 
-Design the course cards to indicate those courses that you have completed personally in a complimentary, but different style than the rest, indicating course completion.
+    Design the course cards to indicate those courses that you have completed personally in a complimentary, but different style than the rest, indicating course completion.
 
-Provide a total number of credits required dynamically by using a reduce function (not shown on the screenshots). The number of credits shown should reflect just the courses currently being displayed.
+    Provide a total number of credits required dynamically by using a reduce function (not shown on the screenshots). The number of credits shown should reflect just the courses currently being displayed.
 
 */
 
+
+// // Modify the courses array content in your script file by changing the completed property to true if you have completed a course.
+// Dynamically display all the courses in the certificate section as shown in the example above. The courses that you have completed must be marked in a different way versus those that you have not completed. Use your page color scheme. The page should adjust automatically if the data source changes.
