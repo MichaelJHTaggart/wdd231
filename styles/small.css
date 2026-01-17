@@ -112,6 +112,17 @@ nav > ol > li {
     margin: 0px;
 }
 
+.filter-buttons-wrapper {
+    display: flex;
+    justify-content: space-around;
+}
+
+.filter-buttons {
+    background-color: var(--color-primary-light);
+    border: solid 1px var(--color-primary);
+    border-radius: .4rem;
+}
+
 .styled-block-content {
     margin: .4rem;
 }
@@ -120,11 +131,10 @@ nav > ol > li {
     height: 200px;
     width: auto;
     border: solid 1px var(--color-primary);
-    border-radius: 1.7rem;
+    border-radius: .4rem;
     margin: 1.2rem 0;
     padding: .5rem 0;
 }
-
 
 footer {
     background-color: #eee;

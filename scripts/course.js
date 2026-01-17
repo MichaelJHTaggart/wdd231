@@ -97,9 +97,10 @@ function generateCourses(uniqueSubject){
         let newDiv = document.createElement("div");
         newDiv.textContent = `${object.subject} ${object.number}`
         if(object.completed){
-            newDiv.style.backgroundColor = "green";
+            newDiv.style.backgroundColor = "#d3d3d3";
+            newDiv.textContent += " ✓"
         } else {
-            newDiv.style.backgroundColor = "red";
+            newDiv.style.backgroundColor = "#F59E0B";
         }
 
         children.push(newDiv)
@@ -110,6 +111,7 @@ function generateCourses(uniqueSubject){
     newCredits.textContent = `The total number of credits required is ${creditValue}`
 
     coursesElement.replaceChildren(...children, newCredits)
+    coursesElement.classList.add("");
 }
 
 function generateFilter(uniqueSubject){
@@ -119,6 +121,7 @@ function generateFilter(uniqueSubject){
     })
     newFilter.textContent = uniqueSubject
     coursesFilter.appendChild(newFilter)
+    coursesFilter.classList.add("filter-buttons-wrapper");
 }
 
 arrayOfUniqueSubjects.forEach((uniqueSubject, index) => {
