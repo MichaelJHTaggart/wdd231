@@ -115,12 +115,14 @@ nav > ol > li {
 .filter-buttons-wrapper {
     display: flex;
     justify-content: space-around;
+    margin: .7rem;
 }
 
 .filter-buttons {
     background-color: var(--color-primary-light);
     border: solid 1px var(--color-primary);
     border-radius: .4rem;
+    padding: .2rem;
 }
 
 .styled-block-content {

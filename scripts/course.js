@@ -120,6 +120,7 @@ function generateFilter(uniqueSubject){
         generateCourses(uniqueSubject);
     })
     newFilter.textContent = uniqueSubject
+    newFilter.classList.add("filter-buttons")
     coursesFilter.appendChild(newFilter)
     coursesFilter.classList.add("filter-buttons-wrapper");
 }
