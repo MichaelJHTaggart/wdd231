@@ -77,6 +77,7 @@ const courses = [
         completed: true
     }
 ]
+
 // All Courses
 let arrayOfAllCourseNames = courses.map(object => `${object.subject} ${object.number}`)
 // Where Course Output is going
@@ -104,9 +105,12 @@ function generateCourses(uniqueSubject){
         children.push(newDiv)
     })
 
-    coursesElement.replaceChildren(...children)
-}
+    let newCredits = document.createElement("div");
+    let creditValue = newCoursesArray.reduce((accumulator, currentValue)=>accumulator + currentValue.credits,0)
+    newCredits.textContent = `The total number of credits required is ${creditValue}`
 
+    coursesElement.replaceChildren(...children, newCredits)
+}
 
 function generateFilter(uniqueSubject){
     let newFilter = document.createElement("div");
@@ -121,6 +125,11 @@ arrayOfUniqueSubjects.forEach((uniqueSubject, index) => {
     generateFilter(uniqueSubject);
 })
 
+// Return the All Courses first.
+window.onload = function() {
+    const allCourses = document.getElementById('coursesFilter').firstElementChild;
+    allCourses.click();
+};
 
 // TODO: I want this to generate all of the outcomes all at once, and store the outcomes in memory. So they are not being rebuilt every time a user clicks on the screen. It is just fetching it from memory, and updating the DOM. Adjust the function to do that.
 
