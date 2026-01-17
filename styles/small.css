@@ -7,3 +7,154 @@
 /* Use your own color scheme and typography choices. */
 /* Use the Google Fonts API to select one font family to use on this page. */
 /* Your design cannot just be a simple one column layout (default flow layout) in all views in order to warrant full credit consideration. */
+
+:root {
+  --color-primary: #1F2933;
+  --color-primary-dark:rgb(15, 21, 26);
+  --color-primary-light:#d3d3d3;
+  --color-secondary: #3B82F6;
+  --color-accent: #F59E0B;
+  --color-neutral: #F3F4F6;
+}
+
+a {
+    text-decoration: none;
+
+}
+
+a:-webkit-any-link {
+    color: var(--color-neutral)
+}
+
+header > div {
+    padding: .7rem .7rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header > div > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .7rem;
+}
+
+nav > ol {
+    padding: 0;
+    margin: 0;
+    border: solid 2px var(--color-primary-dark)
+}
+
+nav > ol > li {
+    list-style: none;
+    list-style-type: none;
+    background-color: var(--color-primary);
+    color: var(--color-neutral);
+    padding: 1.2rem 1.2rem;
+    border: solid 1px var(--color-primary-dark)
+}
+
+#ham-btn {
+    background: none;
+    border: none;   
+}
+
+.hamburger {
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: var(--color-accent);
+    cursor: pointer;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.hamburger::before {
+    content: "\2630"
+}
+
+.hamburger.show::before {
+    content: "\00D7";
+}
+
+.navigation {
+    display: none;
+}
+
+.navigation.show {
+    display: block;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    padding: 0rem .7rem;
+    gap: 2rem;
+}
+
+.styled-block-header {
+    background-color: var(--color-primary);
+    color: var(--color-neutral);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    margin: 0;
+}
+
+.styled-block-content-wrapper {
+    background-color: var(--color-primary-light);
+    color: var(--color-primary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 .4rem;
+    margin: 0px;
+}
+
+.styled-block-content {
+    margin: .4rem;
+}
+
+.styled-block-content-wrapper > picture > img {
+    height: 200px;
+    width: auto;
+    border: solid 1px var(--color-primary);
+    border-radius: 1.7rem;
+    margin: 1.2rem 0;
+    padding: .5rem 0;
+}
+
+
+footer {
+    background-color: #eee;
+    padding: 1rem 10px;
+    text-align: center;
+}
+
+.social {
+    display: flex;
+    justify-content: center;
+    column-gap: 8px;
+    list-style: none;
+    list-style-type: none;
+}
+
+.social a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    border: #ccc dashed 1px;
+    border-radius: 22px;
+}
+
+.social img {
+    width: 22px;
+    height: 22px;
+}
+
+.social a:hover {
+    background-color: #ddd;
+}
