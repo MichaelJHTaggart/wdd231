@@ -111,7 +111,6 @@ function generateCourses(uniqueSubject){
     newCredits.textContent = `The total number of credits required is ${creditValue}`
 
     coursesElement.replaceChildren(...children, newCredits)
-    coursesElement.classList.add("");
 }
 
 function generateFilter(uniqueSubject){
