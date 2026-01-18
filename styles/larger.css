@@ -1,5 +1,13 @@
 /* Must contain a media query */
 /* Must be second after small.css */
+:root {
+  --color-primary: #1F2933;
+  --color-primary-dark:rgb(15, 21, 26);
+  --color-primary-light:#d3d3d3;
+  --color-secondary: #3B82F6;
+  --color-accent: #F59E0B;
+  --color-neutral: #F3F4F6;
+}
 
 @media only screen and (min-width: 38rem) {
     
@@ -27,5 +35,28 @@
 
     .navigation a {
         border: none;
+    }
+
+    nav > ol {
+        display: flex;
+        background-color: var(--color-primary);
+    }
+
+    .main {
+        display: grid;
+        grid-template-columns: 7fr 3fr;
+        gap: 2rem;
+    }
+    .main > :nth-child(1) {
+        grid-column: 1 / -1;
+    }
+    .main > :nth-child(2) {
+        grid-column: 1 / 2;
+    }
+    .main > :nth-child(3) {
+        grid-column: 2 / 3;
+    }
+    .main > :nth-child(4) {
+        grid-column: 1 / -1;
     }
 }
