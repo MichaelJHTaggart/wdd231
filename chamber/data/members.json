@@ -8,7 +8,7 @@
         "discord": "https://discord.com/invite/FWnQzgjr",
         "instagram": "https://www.instagram.com/one_haven5956/"
     },
-    "imageFile": "one_haven_cafe.jpg",
+    "imageFile": "./images/one-haven.svg",
     "membershipLevel": 3,
     "description": "Cafe with gluten-free bakery items, lunch options, tabletop games, and an art gallery."
   },
@@ -21,7 +21,7 @@
       "facebook": "https://www.facebook.com/peakimprov",
       "instagram": "https://www.instagram.com/peak_improv_theater/"
     },
-    "imageFile": "peak_improv.jpg",
+    "imageFile": "./images/peak-improv.webp",
     "membershipLevel": 2,
     "description": "Live improv comedy theater offering shows, classes, and corporate team-building events."
   },
@@ -36,7 +36,7 @@
       "youtube": "https://www.youtube.com/@dungeonsjavascoloradosprin694",
       "tiktok": "https://www.tiktok.com/@dungeons.javas"
     },
-    "imageFile": "dungeons_and_javas.jpg",
+    "imageFile": "./images/dj.webp",
     "membershipLevel": 3,
     "description": "Board game cafe offering coffee, food, tabletop gaming, and community events."
   },
@@ -50,7 +50,7 @@
       "x": "https://x.com/GamersHavenCO",
       "instagram": "https://www.instagram.com/gamershavenco/"
     },
-    "imageFile": "gamers_haven.jpg",
+    "imageFile": "./images/gamers-haven.webp",
     "membershipLevel": 2,
     "description": "Local game store offering tabletop games, trading cards, miniatures, and community play space."
   },
@@ -60,27 +60,27 @@
     "phone": "(719) 633-1735",
     "website": "https://www.edelweissrest.com/",
     "socialMedia": {},
-    "imageFile": "edelweiss_german.jpg",
+    "imageFile": "./images/edelweiss.webp",
     "membershipLevel": 1,
     "description": "Traditional German restaurant featuring classic dishes, imported beer, and desserts."
   },
   {
     "name": "Skirted Heifer",
-    "address": "434 W Fillmore St Unit A, Colorado Springs, CO 80907, USA",
-    "phone": "(719) 635-1560",
-    "website": "https://humblecoffee.co/",
+    "address": "5935 Dublin Blvd #140, Colorado Springs, CO 80923",
+    "phone": "(719) 421-7182",
+    "website": "https://skirtedheifer.com/",
     "socialMedia": {},
-    "imageFile": "humble_coffee.jpg",
+    "imageFile": "./images/skirted-heifer.webp",
     "membershipLevel": 1,
     "description": "Local coffee roaster and cafe serving specialty drinks and pastries."
   },
   {
     "name": "Gripstone Climbing & Fitness",
-    "address": "6140 Austin Bluffs Pkwy Suite 150, Colorado Springs, CO 80923, USA",
-    "phone": "(719) 264-2386",
-    "website": "https://wayfindercoffee.com/",
+    "address": "6220 Tutt Blvd, Colorado Springs, CO 80923",
+    "phone": "(719) 559-4747",
+    "website": "https://gripstonecs.com/",
     "socialMedia": {},
-    "imageFile": "wayfinder_coffee.jpg",
+    "imageFile": "./images/gripstone.webp",
     "membershipLevel": 2,
     "description": "Travel-inspired coffee shop offering craft beverages and baked goods."
   }

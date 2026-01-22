@@ -170,3 +170,28 @@ footer {
 .social a:hover {
     background-color: #ddd;
 }
+
+.directory-title{
+    text-align: center;
+}
+
+.directory-btn-wrapper-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.directory-btn-wrapper {
+    border: solid 2px var(--color-primary);
+    padding: .2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: .5rem;
+}
+
+.directory-btn-wrapper:hover {
+    background-color: var(--color-accent);
+    cursor: pointer;
+}
+
