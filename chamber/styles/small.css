@@ -8,14 +8,14 @@
 /* Use the Google Fonts API to select one font family to use on this page. */
 /* Your design cannot just be a simple one column layout (default flow layout) in all views in order to warrant full credit consideration. */
 
-:root {
+/* :root {
   --color-primary: #1F2933;
   --color-primary-dark:rgb(15, 21, 26);
   --color-primary-light:#d3d3d3;
   --color-secondary: #3B82F6;
   --color-accent: #F59E0B;
   --color-neutral: #F3F4F6;
-}
+} */
 
 a {
     text-decoration: none;
