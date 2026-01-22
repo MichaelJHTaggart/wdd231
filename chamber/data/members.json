@@ -1,0 +1,87 @@
+[
+  {
+    "name": "One Haven Cafe & Game Shop",
+    "address": "5956 Stetson Hills Blvd, Colorado Springs, CO 80923, USA",
+    "phone": "(719) 867-5309",
+    "website": "https://onehavencafe.com/",
+    "socialMedia": {
+        "discord": "https://discord.com/invite/FWnQzgjr",
+        "instagram": "https://www.instagram.com/one_haven5956/"
+    },
+    "imageFile": "one_haven_cafe.jpg",
+    "membershipLevel": 3,
+    "description": "Cafe with gluten-free bakery items, lunch options, tabletop games, and an art gallery."
+  },
+  {
+    "name": "Peak Improv",
+    "address": "3440 N Carefree Cir Ste 140-150, Colorado Springs, CO 80917, USA",
+    "phone": "(719) 463-8359",
+    "website": "https://peakimprov.com/",
+    "socialMedia": {
+      "facebook": "https://www.facebook.com/peakimprov",
+      "instagram": "https://www.instagram.com/peak_improv_theater/"
+    },
+    "imageFile": "peak_improv.jpg",
+    "membershipLevel": 2,
+    "description": "Live improv comedy theater offering shows, classes, and corporate team-building events."
+  },
+  {
+    "name": "Dungeons and Javas",
+    "address": "4420 Austin Bluffs Parkway, Colorado Springs, CO 80918, USA",
+    "phone": "719-418-3276",
+    "website": "https://www.dungeonsandjavas.com/",
+    "socialMedia": {
+      "facebook": "https://www.facebook.com/dungeonsandjavas/",
+      "instagram": "https://www.instagram.com/dungeons_javas/?hl=en",
+      "youtube": "https://www.youtube.com/@dungeonsjavascoloradosprin694",
+      "tiktok": "https://www.tiktok.com/@dungeons.javas"
+    },
+    "imageFile": "dungeons_and_javas.jpg",
+    "membershipLevel": 3,
+    "description": "Board game cafe offering coffee, food, tabletop gaming, and community events."
+  },
+  {
+    "name": "Gamer's Haven",
+    "address": "5681 Academy Blvd N, Colorado Springs, CO 80918, USA",
+    "phone": "(719) 531-9863",
+    "website": "https://www.gamershavenco.com/",
+    "socialMedia": {
+      "facebook": "https://www.facebook.com/GamersHavenCO/",
+      "x": "https://x.com/GamersHavenCO",
+      "instagram": "https://www.instagram.com/gamershavenco/"
+    },
+    "imageFile": "gamers_haven.jpg",
+    "membershipLevel": 2,
+    "description": "Local game store offering tabletop games, trading cards, miniatures, and community play space."
+  },
+  {
+    "name": "Edelweiss German Restaurant",
+    "address": "34 E Ramona Ave, Colorado Springs, CO 80905, USA",
+    "phone": "(719) 633-1735",
+    "website": "https://www.edelweissrest.com/",
+    "socialMedia": {},
+    "imageFile": "edelweiss_german.jpg",
+    "membershipLevel": 1,
+    "description": "Traditional German restaurant featuring classic dishes, imported beer, and desserts."
+  },
+  {
+    "name": "Skirted Heifer",
+    "address": "434 W Fillmore St Unit A, Colorado Springs, CO 80907, USA",
+    "phone": "(719) 635-1560",
+    "website": "https://humblecoffee.co/",
+    "socialMedia": {},
+    "imageFile": "humble_coffee.jpg",
+    "membershipLevel": 1,
+    "description": "Local coffee roaster and cafe serving specialty drinks and pastries."
+  },
+  {
+    "name": "Gripstone Climbing & Fitness",
+    "address": "6140 Austin Bluffs Pkwy Suite 150, Colorado Springs, CO 80923, USA",
+    "phone": "(719) 264-2386",
+    "website": "https://wayfindercoffee.com/",
+    "socialMedia": {},
+    "imageFile": "wayfinder_coffee.jpg",
+    "membershipLevel": 2,
+    "description": "Travel-inspired coffee shop offering craft beverages and baked goods."
+  }
+]
