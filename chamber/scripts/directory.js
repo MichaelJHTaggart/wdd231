@@ -1,16 +1,16 @@
-const url = 'https://github.com/MichaelJHTaggart/wdd231/chamber/data/members.json';  
+const url = 'https://raw.githubusercontent.com/MichaelJHTaggart/wdd231/refs/heads/main/chamber/data/members.json';  
 const cards = document.querySelector('#cards');
 
 async function getBusinessData(){
     const response = await fetch(url)
     const data = await response.json()
     // console.table(data)
-    displayBusiness(data.businesses)
+    displayBusiness(data)
     return response
 }
 
-const displayBusiness = (businesses) => {
-  businesses.forEach((business) => {
+const displayBusiness = (data) => {
+  data.forEach((business) => {
     let card = document.createElement("section");
     let portrait = document.createElement("img");
     let fullName = document.createElement("h2");
@@ -26,11 +26,11 @@ const displayBusiness = (businesses) => {
     portrait.setAttribute("src", `${business.imageFile}`)
     portrait.setAttribute("alt", `Portrait of business ${business.name}`)
     portrait.setAttribute("loading", `lazy`)
-    portrait.setAttribute("width", `340`)
-    portrait.setAttribute("height", `440`)
+    portrait.setAttribute("width", `200`)
+    portrait.setAttribute("height", `200`)
+    portrait.setAttribute("class", `business-image`)
 
     card.setAttribute("class", "card")
-    pob.setAttribute("class", "pob")
 
     card.appendChild(portrait);
     card.appendChild(fullName);

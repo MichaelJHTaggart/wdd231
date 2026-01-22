@@ -195,3 +195,7 @@ footer {
     cursor: pointer;
 }
 
+.business-image {
+    height: 5rem;
+    width: auto;
+}
