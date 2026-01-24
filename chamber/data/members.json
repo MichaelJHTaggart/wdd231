@@ -1,7 +1,7 @@
 [
   {
     "name": "One Haven Cafe & Game Shop",
-    "address": "5956 Stetson Hills Blvd, Colorado Springs, CO 80923, USA",
+    "address": "5956 Stetson Hills Blvd, Colorado Springs, CO 80923",
     "phone": "(719) 867-5309",
     "website": "https://onehavencafe.com/",
     "socialMedia": {
@@ -14,7 +14,7 @@
   },
   {
     "name": "Peak Improv",
-    "address": "3440 N Carefree Cir Ste 140-150, Colorado Springs, CO 80917, USA",
+    "address": "3440 N Carefree Cir Ste 140-150, Colorado Springs, CO 80917",
     "phone": "(719) 463-8359",
     "website": "https://peakimprov.com/",
     "socialMedia": {
@@ -27,8 +27,8 @@
   },
   {
     "name": "Dungeons and Javas",
-    "address": "4420 Austin Bluffs Parkway, Colorado Springs, CO 80918, USA",
-    "phone": "719-418-3276",
+    "address": "4420 Austin Bluffs Parkway, Colorado Springs, CO 80918",
+    "phone": "(719) 418-3276",
     "website": "https://www.dungeonsandjavas.com/",
     "socialMedia": {
       "facebook": "https://www.facebook.com/dungeonsandjavas/",
@@ -42,7 +42,7 @@
   },
   {
     "name": "Gamer's Haven",
-    "address": "5681 Academy Blvd N, Colorado Springs, CO 80918, USA",
+    "address": "5681 Academy Blvd N, Colorado Springs, CO 80918",
     "phone": "(719) 531-9863",
     "website": "https://www.gamershavenco.com/",
     "socialMedia": {
@@ -56,7 +56,7 @@
   },
   {
     "name": "Edelweiss German Restaurant",
-    "address": "34 E Ramona Ave, Colorado Springs, CO 80905, USA",
+    "address": "34 E Ramona Ave, Colorado Springs, CO 80905",
     "phone": "(719) 633-1735",
     "website": "https://www.edelweissrest.com/",
     "socialMedia": {},

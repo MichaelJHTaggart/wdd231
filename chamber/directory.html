@@ -13,8 +13,8 @@
     <link rel="icon" href="images/favicon.ico">
     <link href="https://fonts.googleapis.com/css2?family=Fira+Code&family=Inter:opsz@14..32&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
     <script src="./scripts/date.js" defer></script>
-    <script src="./scripts/navigation.js" defer></script>
     <script src="./scripts/directory.js" defer></script>
+    <script src="./scripts/navigation.js" defer></script>
 
     <meta property="og:title" content="COS Chamber of Commerce | Home">
     <meta property="og:description" content="Home page for the COS Chamber of Commerce project by Michael J.H. Taggart, course work, personal background, and web development studies.">
@@ -44,11 +44,11 @@
         <h1 class="directory-title">List of members for chamber of commerce</h1>
 
         <div class="directory-btn-wrapper-wrapper">
-            <div class="directory-btn-wrapper"><img class="directory-btn" src="./images/table-cells-solid-full.svg" alt="Grid of Members" width="60" height="60"></div>
-            <div class="directory-btn-wrapper"><img class="directory-btn" src="./images/list-solid-full.svg" alt="List of Members" width="60" height="60"></div>
+            <div id="directory-grid" class="directory-btn-wrapper grid-active"><img class="directory-btn" src="./images/table-cells-solid-full.svg" alt="Grid of Members" width="60" height="60"></div>
+            <div id="directory-list" class="directory-btn-wrapper"><img class="directory-btn" src="./images/list-solid-full.svg" alt="List of Members" width="60" height="60"></div>
         </div>
 
-        <div id="cards">
+        <div id="cards" class="grid">
 
         </div>
     </main>
