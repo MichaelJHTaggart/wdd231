@@ -248,27 +248,28 @@ footer {
     padding: 0.25rem;
     box-shadow: none;
     border: none;
-
-    & > * {
-        margin: 0 1rem;
-    }
-
-    img {
-        display: none;
-    }
-
-    > p:nth-of-type(1) {
-        display: none;
-    }
-
-    h3 {
-        font-size: 1rem;
-    }
-
-    &:nth-child(even) {
-        background-color: #bbb;
-    }
 }
+
+.list > section > * {
+    margin: 0 1rem;
+}
+
+.list > section img {
+    display: none;
+}
+
+.list > section > p:nth-of-type(1) {
+    display: none;
+}
+
+.list > section h3 {
+    font-size: 1rem;
+}
+
+.list > section:nth-child(even) {
+    background-color: #bbb;
+}
+
 
 .list-card {
     box-shadow: none;
