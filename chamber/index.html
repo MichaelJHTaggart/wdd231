@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="The home page for the Chamber of Commerce in Colorado Springs">
+    <meta name="author" content="Michael J.H. Taggart">
+    <link rel="stylesheet" href="./styles/normalize.css">
+    <link rel="stylesheet" href="./styles/small.css">
+    <link rel="stylesheet" href="./styles/larger.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="icon" href="images/favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code&family=Inter:opsz@14..32&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <script src="./scripts/date.js" defer></script>
+    <script src="./scripts/randomBusinessSpotlight.js" defer></script>
+    <script src="./scripts/navigation.js" defer></script>
+
+    <meta property="og:title" content="COS Chamber of Commerce | Directory">
+    <meta property="og:description" content="Home page for the COS Chamber of Commerce project by Michael J.H. Taggart, course work, personal background, and web development studies.">
+    <meta property="og:url" content="https://michaeljhtaggart.github.io/wdd231/">
+    <meta property="og:image" content="https://michaeljhtaggart.github.io/wdd231/images/portfolio-desktop.webp">
+
+    <title>Directory for COS Chamber of Commerce</title>
+</head>
+<body>
+    <header>
+        <div>
+            <div>
+                <img src="images/home.svg" alt="Site Logo" width="42" height="42">
+                <span>COS Chamber of Commerce</span>
+            </div>
+            <button id="ham-btn" class="hamburger"></button>
+        </div>
+        <nav id="nav-bar" class="navigation">
+            <ol>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Chamber</a></li>
+                <li><a href="#">Final</a></li>
+            </ol>
+        </nav>
+    </header>
+    <main class="main-home">
+        <div class="hero-wrapper">
+            <picture class="picture-hero">
+                <source srcset="./images/hero-desktop.webp 1280w" media="(min-width: 550px)" sizes="1280">
+                <img class="hero-image-small" src="./images/hero-mobile-2.webp" alt="Colorado Springs Downtown area" width="360" height="202">
+            </picture>
+            <button id="cta">Keynote Tickets</button>
+        </div>
+
+        <div class="home-wrapper">
+            <h1>Home</h1>
+            <section >
+                <h2 class="styled-block-header bigger">Events</h2>
+                <div class="styled-block-content-wrapper"></div>
+            </section>
+            <section>
+                <h2 class="styled-block-header bigger">Current Weather</h2>
+                <div class="styled-block-content-wrapper">
+                    <!-- Image -->
+                    <div id="weather-info"></div>
+                </div>
+            </section>
+            <section>
+                <h2 class="styled-block-header bigger">Weather Forecast</h2>
+                <div id="three-day-forecast" class="styled-block-content-wrapper">
+                    <!-- Next 3 day forecast -->
+                </div>
+            </section>
+            <section id="business-spotlight">
+            </section>
+        </div>
+
+    </main>
+    <footer>
+        <div>
+            <p>Peak Solutions Group</p>
+            <p>7421 Pikes Peak Avenue, Suite 210</p>
+            <p>Colorado Springs, CO 80919</p>
+            <p>Email: info@peaksolutionsgroup.co</p>
+            <p>(719) 555-4827</p>
+        </div>
+        <ol class="social">
+            <li><a href="https://github.com/MichaelJHTaggart" target="_blank"><img src="images/github.svg" alt="github" width="16" height="16"></a></li>
+            <li><a href="https://www.linkedin.com/in/michaeljhtaggart/" target="_blank"><img src="images/linkedin.svg" alt="linkedin" width="16" height="16"></a></li>
+            <li><a href="https://www.twitch.tv/b1ueh4wk" target="_blank"><img src="images/twitch.svg" alt="twitch" width="16" height="16"></a></li>
+        </ol>   
+        <div>
+            <span id="currentyear"></span>
+            <span>|</span>
+            <span>Michel J.H. Taggart</span>
+            <span>|</span>
+            <span>Colorado, USA</span>
+        </div>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+</html>

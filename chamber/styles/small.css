@@ -10,7 +10,7 @@
 
 /* :root {
   --color-primary: #1F2933;
-  --color-primary-dark:rgb(15, 21, 26);
+  --color-primary-dark: rgb(15, 21, 26);
   --color-primary-light:#d3d3d3;
   --color-secondary: #3B82F6;
   --color-accent: #F59E0B;
@@ -144,6 +144,7 @@ footer {
     column-gap: 8px;
     list-style: none;
     list-style-type: none;
+    padding: 0px;
 }
 
 .social a {
@@ -200,7 +201,7 @@ footer {
     flex-direction: column;
     align-items: center;
     border: solid 1px var(--color-accent);
-    margin: 2rem 2rem;
+    margin: 1.5rem 1.5rem;
     padding: 1rem;
     width: auto;
     box-shadow: 5px 5px 5px 5px var(--color-primary);
@@ -272,4 +273,63 @@ footer {
 .list-card {
     box-shadow: none;
     border: none;
+}
+
+.hero-wrapper {
+    position: relative;
+}
+
+.picture-hero {
+    align-self: anchor-center;
+}
+
+picture.picture-hero .hero-image-small {
+  max-height: 110px;
+  object-fit: cover;
+  display: block;
+  width: 100%;
+}
+
+#cta {
+    background-color: var(--color-accent);
+    border: solid 1px var(--color-neutral);
+    padding: .5rem 1.2rem;
+    border-radius: 7px;
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+}
+
+#cta:hover {
+    background-color: var(--color-primary-dark);
+    border: solid 1px var(--color-primary-light);
+    color: var(--color-primary-light)
+}
+
+.main-home > section {
+    margin: 1rem 0;
+}
+
+.bigger {
+    font-size: 1.7rem;
+}
+
+.home-wrapper {
+    margin: 0rem .5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.home-wrapper > section{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.home-card {
+    margin: 0rem 1rem;
+}
+
+#business-spotlight{
+    margin-bottom: 2rem;
 }
