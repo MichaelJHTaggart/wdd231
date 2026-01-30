@@ -279,10 +279,6 @@ footer {
     position: relative;
 }
 
-.picture-hero {
-    align-self: anchor-center;
-}
-
 picture.picture-hero .hero-image-small {
   max-height: 110px;
   object-fit: cover;

@@ -97,7 +97,7 @@
     }
     .home-wrapper > :nth-child(5){
         grid-column: 1 / -1
-    };
+    }
 
     .home-wrapper > section > div {
         height: inherit;
@@ -109,5 +109,4 @@
         grid-template-rows: auto auto 1fr;  
         gap: 0px;
     }
-
 }
