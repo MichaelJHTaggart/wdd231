@@ -323,7 +323,10 @@ picture.picture-hero .hero-image-small {
 .home-wrapper > section{
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+}
+
+.home-wrapper > section > div{
+    margin-bottom: 2rem
 }
 
 .home-card {

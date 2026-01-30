@@ -1,0 +1,45 @@
+{
+    "coord": {
+        "lon": -112.0245,
+        "lat": 41.1136
+    },
+    "weather": [
+        {
+            "id": 721,
+            "main": "Haze",
+            "description": "haze",
+            "icon": "50d"
+        }
+    ],
+    "base": "stations",
+    "main": {
+        "temp": 40.86,
+        "feels_like": 36.21,
+        "temp_min": 38.01,
+        "temp_max": 44.42,
+        "pressure": 1032,
+        "humidity": 54,
+        "sea_level": 1032,
+        "grnd_level": 873
+    },
+    "visibility": 10000,
+    "wind": {
+        "speed": 6.91,
+        "deg": 280
+    },
+    "clouds": {
+        "all": 75
+    },
+    "dt": 1769805905,
+    "sys": {
+        "type": 2,
+        "id": 2010220,
+        "country": "US",
+        "sunrise": 1769784048,
+        "sunset": 1769820112
+    },
+    "timezone": -25200,
+    "id": 5772959,
+    "name": "Clearfield",
+    "cod": 200
+}

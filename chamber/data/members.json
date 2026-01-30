@@ -9,7 +9,7 @@
         "instagram": "https://www.instagram.com/one_haven5956/"
     },
     "imageFile": "./images/one-haven.svg",
-    "membershipLevel": 3,
+    "membershipLevel": "Gold",
     "description": "Cafe with gluten-free bakery items, lunch options, tabletop games, and an art gallery."
   },
   {
@@ -22,7 +22,7 @@
       "instagram": "https://www.instagram.com/peak_improv_theater/"
     },
     "imageFile": "./images/peak-improv.webp",
-    "membershipLevel": 2,
+    "membershipLevel": "Silver",
     "description": "Live improv comedy theater offering shows, classes, and corporate team-building events."
   },
   {
@@ -37,7 +37,7 @@
       "tiktok": "https://www.tiktok.com/@dungeons.javas"
     },
     "imageFile": "./images/dj.webp",
-    "membershipLevel": 3,
+    "membershipLevel": "Gold",
     "description": "Board game cafe offering coffee, food, tabletop gaming, and community events."
   },
   {
@@ -51,7 +51,7 @@
       "instagram": "https://www.instagram.com/gamershavenco/"
     },
     "imageFile": "./images/gamers-haven.webp",
-    "membershipLevel": 2,
+    "membershipLevel": "Silver",
     "description": "Local game store offering tabletop games, trading cards, miniatures, and community play space."
   },
   {
@@ -61,7 +61,7 @@
     "website": "https://www.edelweissrest.com/",
     "socialMedia": {},
     "imageFile": "./images/edelweiss.webp",
-    "membershipLevel": 1,
+    "membershipLevel": "Bronze",
     "description": "Traditional German restaurant featuring classic dishes, imported beer, and desserts."
   },
   {
@@ -71,7 +71,7 @@
     "website": "https://skirtedheifer.com/",
     "socialMedia": {},
     "imageFile": "./images/skirted-heifer.webp",
-    "membershipLevel": 1,
+    "membershipLevel": "Bronze",
     "description": "Local coffee roaster and cafe serving specialty drinks and pastries."
   },
   {
@@ -81,7 +81,7 @@
     "website": "https://gripstonecs.com/",
     "socialMedia": {},
     "imageFile": "./images/gripstone.webp",
-    "membershipLevel": 2,
+    "membershipLevel": "Silver",
     "description": "Travel-inspired coffee shop offering craft beverages and baked goods."
   }
 ]

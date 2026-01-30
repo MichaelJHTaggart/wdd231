@@ -15,6 +15,9 @@
     <script src="./scripts/date.js" defer></script>
     <script src="./scripts/randomBusinessSpotlight.js" defer></script>
     <script src="./scripts/navigation.js" defer></script>
+    <script src="./scripts/currentWeather.js" defer></script>
+    <script src="./scripts/weatherForecast.js" defer></script>
+
 
     <meta property="og:title" content="COS Chamber of Commerce | Directory">
     <meta property="og:description" content="Home page for the COS Chamber of Commerce project by Michael J.H. Taggart, course work, personal background, and web development studies.">
@@ -55,14 +58,16 @@
                 <h2 class="styled-block-header bigger">Events</h2>
                 <div class="styled-block-content-wrapper"></div>
             </section>
-            <section>
+            <section id="currentWeather">
                 <h2 class="styled-block-header bigger">Current Weather</h2>
                 <div class="styled-block-content-wrapper">
                     <!-- Image -->
-                    <div id="weather-info"></div>
+                    <div id="weather-info">
+                        
+                    </div>
                 </div>
             </section>
-            <section>
+            <section id="weatherForecast">
                 <h2 class="styled-block-header bigger">Weather Forecast</h2>
                 <div id="three-day-forecast" class="styled-block-content-wrapper">
                     <!-- Next 3 day forecast -->
@@ -71,7 +76,6 @@
             <section id="business-spotlight">
             </section>
         </div>
-
     </main>
     <footer>
         <div>
@@ -85,7 +89,7 @@
             <li><a href="https://github.com/MichaelJHTaggart" target="_blank"><img src="images/github.svg" alt="github" width="16" height="16"></a></li>
             <li><a href="https://www.linkedin.com/in/michaeljhtaggart/" target="_blank"><img src="images/linkedin.svg" alt="linkedin" width="16" height="16"></a></li>
             <li><a href="https://www.twitch.tv/b1ueh4wk" target="_blank"><img src="images/twitch.svg" alt="twitch" width="16" height="16"></a></li>
-        </ol>   
+        </ol> 
         <div>
             <span id="currentyear"></span>
             <span>|</span>

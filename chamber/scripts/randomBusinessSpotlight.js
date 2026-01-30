@@ -4,9 +4,15 @@ const cards = document.querySelector('#business-spotlight');
 async function getBusinessData(){
     const response = await fetch(url)
     const data = await response.json()
+    data.filter((object)=>{
+        if(object.membershipLevel === "Gold" || object.membershipLevel === "Silver"){
+          return true
+        } else false
+      });
     displayBusiness(data.sort(() => Math.random() - 0.5).slice(0, 3));
     return response
 }
+
 
 const displayBusiness = (data) => {
   data.forEach((business) => {
@@ -17,11 +23,15 @@ const displayBusiness = (data) => {
     let address = document.createElement("p");
     let phone = document.createElement("p");
     let website = document.createElement("p");
+
+    let membershipLevel = document.createElement("p");
+
     // let socialMedia = document.createElement("div")
     fullName.textContent = `${business.name}`
     address.textContent = `${business.address}`
     phone.textContent = `${business.phone}`
     website.textContent = `${business.website}`
+    membershipLevel.textContent = `${business.membershipLevel}`
     
     portrait.setAttribute("src", `${business.imageFile}`)
     portrait.setAttribute("alt", `Portrait of business ${business.name}`)
@@ -37,6 +47,7 @@ const displayBusiness = (data) => {
     card.appendChild(address);
     card.appendChild(phone);
     card.appendChild(website);
+    card.appendChild(membershipLevel);
     cards.appendChild(card);
   });
 }
