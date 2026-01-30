@@ -3,13 +3,13 @@ const cards = document.querySelector('#business-spotlight');
 
 async function getBusinessData(){
     const response = await fetch(url)
-    const data = await response.json()
-    data.filter((object)=>{
+    let data = await response.json()
+    let filteredData = data.filter((object)=>{
         if(object.membershipLevel === "Gold" || object.membershipLevel === "Silver"){
           return true
         } else false
       });
-    displayBusiness(data.sort(() => Math.random() - 0.5).slice(0, 3));
+    displayBusiness(filteredData.sort(() => Math.random() - 0.5).slice(0, 3));
     return response
 }
 
