@@ -320,12 +320,12 @@ picture.picture-hero .hero-image-small {
     flex-direction: column;
 }
 
-.home-wrapper > section{
+.home-wrapper > section {
     display: flex;
     flex-direction: column;
 }
 
-.home-wrapper > section > div{
+.home-wrapper > section > div {
     margin-bottom: 2rem
 }
 
@@ -333,6 +333,18 @@ picture.picture-hero .hero-image-small {
     margin: 0rem 1rem;
 }
 
-#business-spotlight{
+#business-spotlight {
     margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.tall {
+    height: 10rem
+}
+
+#currentWeather, #three-day-forecast {
+    display: flex;
+    flex-direction: column;
 }
