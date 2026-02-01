@@ -78,6 +78,8 @@ const courses = [
     }
 ]
 
+
+let courseDetails = document.getElementById("course-details")
 // All Courses
 let arrayOfAllCourseNames = courses.map(object => `${object.subject} ${object.number}`)
 // Where Course Output is going
@@ -94,7 +96,11 @@ function generateCourses(uniqueSubject){
     } 
     let children = []
     newCoursesArray.map((object)=>{
+        
         let newDiv = document.createElement("div");
+        newDiv.addEventListener('click', () => {
+            displayCourseDetails(object);
+        });
         newDiv.textContent = `${object.subject} ${object.number}`
         if(object.completed){
             newDiv.style.backgroundColor = "#d3d3d3";
@@ -133,6 +139,30 @@ window.onload = function() {
     const allCourses = document.getElementById('coursesFilter').firstElementChild;
     allCourses.click();
 };
+
+
+function displayCourseDetails(course) {
+
+  courseDetails.innerHTML = '';
+  courseDetails.innerHTML = `
+    <button id="closeModal">❌</button>
+    <h2>${course.subject} ${course.number}</h2>
+    <h3>${course.title}</h3>
+    <p><strong>Credits</strong>: ${course.credits}</p>
+    <p><strong>Certificate</strong>: ${course.certificate}</p>
+    <p>${course.description}</p>
+    <p><strong>Technologies</strong>: ${course.technology.join(', ')}</p>
+  `;
+  courseDetails.showModal();
+  
+  closeModal.addEventListener("click", () => {
+    courseDetails.close();
+  });
+}
+
+closeModal.addEventListener('click', () => {
+  modal.close();
+});
 
 // TODO: I want this to generate all of the outcomes all at once, and store the outcomes in memory. So they are not being rebuilt every time a user clicks on the screen. It is just fetching it from memory, and updating the DOM. Adjust the function to do that.
 

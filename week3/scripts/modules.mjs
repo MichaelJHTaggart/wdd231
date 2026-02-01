@@ -1,5 +1,5 @@
 import { setTitle, renderSections } from "./output.mjs";
-import byuiCourse from './course.mjs';  
+import byuiCourse from './course.js';  
 import { setSectionSelection } from './sections.mjs';
 
 console.log(setTitle, renderSections, byuiCourse, setSectionSelection)
