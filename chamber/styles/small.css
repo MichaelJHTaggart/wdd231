@@ -345,3 +345,23 @@ picture.picture-hero .hero-image-small {
     display: flex;
     flex-direction: column;
 }
+
+
+form {
+    display: grid;
+    gap: 1rem;
+    padding: 1rem
+}
+
+.form-group {
+    display: grid;
+}
+
+.thankyou-main{
+    padding-bottom: 2rem;
+}
+
+.thankyou-main > h1{
+    text-align: center;
+    padding: 2rem;
+}
