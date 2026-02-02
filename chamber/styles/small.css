@@ -382,6 +382,8 @@ form {
     align-items: center;
     flex-direction: column;
     height: fit-content;
+    opacity: 0;
+    animation: fadeInUp 0.8s ease-out forwards;
 }
 
 .price, .tagline {
@@ -401,10 +403,6 @@ form {
   }
 }
 
-.membership-card {
-  animation: fadeInUp 0.8s ease-out;
-}
-
 .card-1 { 
     animation-delay: 0s;    
 }
@@ -419,11 +417,6 @@ form {
 
 .card-4 { 
     animation-delay: 0.45s;
-}
-
-.membership-card {
-  opacity: 0;
-  animation: fadeInUp 0.8s ease-out forwards;
 }
 
 dialog {
