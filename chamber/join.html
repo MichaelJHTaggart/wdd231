@@ -18,6 +18,7 @@
     <script src="./scripts/current-weather.js" defer></script>
     <script src="./scripts/weather-forecast.js" defer></script>
     <script src="./scripts/modal.js" defer></script>
+    <script src="./scripts/getDate.js" defer></script>
 
 
     <meta property="og:title" content="COS Chamber of Commerce | Directory">
@@ -25,7 +26,7 @@
     <meta property="og:url" content="https://michaeljhtaggart.github.io/wdd231/">
     <meta property="og:image" content="https://michaeljhtaggart.github.io/wdd231/images/portfolio-desktop.webp">
 
-    <title>Directory for COS Chamber of Commerce</title>
+    <title>Join COS Chamber of Commerce</title>
 </head>
 <body>
     <header>
@@ -49,69 +50,64 @@
         <h1>One of us.... One of us...</h1>
 
         <div class="form-and-section">
-            <form action="./thankyou.html" method="get">
+            <form action="thankyou.html" method="get">
                 <div class="form-group">
                     <label for="firstName">First Name:</label>
-                    <input name="firstName" id="firstName" type="text" autocomplete="given-name" required />
+                    <input name="firstName" id="firstName" type="text" autocomplete="given-name" title="Enter your first name" required >
                 </div>
                 <div class="form-group">
                     <label for="lastName">Last Name:</label>
-                    <input name="lastName" id="lastName" type="text" autocomplete="family-name" required />
+                    <input name="lastName" id="lastName" type="text" autocomplete="family-name" title="Enter your last name" required >
                 </div>
                 <div class="form-group">
                     <label for="orgTitle">Organization Title:</label>
-                    <input name="orgTitle" id="orgTitle" type="text" autocomplete="organization-title" pattern="^[A-Za-z -]{7,}$">
+                    <input name="orgTitle" id="orgTitle" type="text" autocomplete="organization-title" title="Enter your title in your organization (minimum 7 characters, letters, spaces, and hyphens only)" pattern="^[A-Za-z -]{7,}$" >
                 </div>
                 <div class="form-group">
                     <label for="email">Email:</label>
-                    <input name="email" id="email" type="email" autocomplete="email@example.com" required />
+                    <input name="email" id="email" type="email" autocomplete="email" title="Enter your email. Example: example@example.com" required >
                 </div>
                 <div class="form-group">
                     <label for="phone">Mobile Phone Number:</label>
-                    <input name="phone" id="phone" type="tel" autocomplete="888-888-8888" required />
+                    <input name="phone" id="phone" type="tel" autocomplete="tel" title="Enter your mobile phone number. Example: 555-123-4567" required >
                 </div>
             
                 <div class="form-group">
                     <label for="businessName">Business/Organization Name:</label>
-                    <input name="businessName" id="businessName" type="text" autocomplete="organization" required />
+                    <input name="businessName" id="businessName" type="text" autocomplete="organization" title="Enter your business name" required >
                 </div>
             
                 <div class="form-group">
                     <fieldset required>
                         <legend>Select Membership Level:</legend>
                         <div>
-                            <input type="radio" id="np" name="membership-level" value="np" checked />
+                            <input type="radio" id="np" name="membership-level" value="np" checked required >
                             <label for="np">NP Membership is for non profit organizations and there is no fee</label>
                         </div>
                         <div>
-                            <input type="radio" id="bronze" name="membership-level" value="bronze" />
+                            <input type="radio" id="bronze" name="membership-level" value="bronze" >
                             <label for="bronze">Bronze Membership</label>
                         </div>
                         <div>
-                            <input type="radio" id="silver" name="membership-level" value="silver" />
+                            <input type="radio" id="silver" name="membership-level" value="silver" >
                             <label for="silver">Silver Membership</label>
                         </div>
                         <div>
-                            <input type="radio" id="gold" name="membership-level" value="gold" />
+                            <input type="radio" id="gold" name="membership-level" value="gold" >
                             <label for="gold">Gold Membership</label>
                         </div>
                     </fieldset>
                 </div>
                 <div class="form-group">
                     <label for="description">Tell us about your business or organization:</label>
-                    <textarea id="description" name="description" rows="5" cols="33">
-                        It was a dark and stormy night...
-                    </textarea>
+                    <textarea id="description" name="description" rows="5" cols="33" placeholder="Details about your business..."></textarea>
                 </div>
                 <input id="timestamp" name="timestamp" type="hidden">
                 <button type="submit">Join Membership</button>
             </form>
-            <script>
-                document.getElementById("timestamp").value = new Date().toISOString();
-            </script>
 
             <section class="membership-cards">
-
+                <h2>Membership Levels</h2>
                 <div class="membership-card card-1">
                     <h3>NP Membership</h3>
                     <p class="price">Free</p>
@@ -141,6 +137,7 @@
                 </div>
 
             </section>
+        </div>
 
         <dialog id="membership-details"></dialog>
     </main>

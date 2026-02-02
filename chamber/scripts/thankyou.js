@@ -1,10 +1,6 @@
 const getString = window.location.search;
 
-console.log(getString);
-
 const myInfo = new URLSearchParams(window.location.search);
-
-console.log(myInfo.get('first'));
 
 document.querySelector('#form-submission-info').innerHTML = `
 <p>Thank you <strong>${myInfo.get('firstName')} ${myInfo.get('lastName')}</strong>,</p>
