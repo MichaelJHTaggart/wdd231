@@ -365,3 +365,85 @@ form {
     text-align: center;
     padding: 2rem;
 }
+
+.learn-more{
+    color: var(--color-accent);
+    text-decoration: underline;
+    padding: 1rem;
+}
+
+.membership-card {
+    background-color: var(--color-primary);
+    margin: 2rem;
+    border-radius: 15px;
+    display: flex;
+    color: var(--color-primary-light);
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: fit-content;
+}
+
+.price, .tagline {
+    margin: 0px;
+    padding: 0px;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    color: var(--color-primary);
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.membership-card {
+  animation: fadeInUp 0.8s ease-out;
+}
+
+.card-1 { 
+    animation-delay: 0s;    
+}
+
+.card-2 { 
+    animation-delay: 0.15s;
+}
+
+.card-3 { 
+    animation-delay: 0.3s;
+}
+
+.card-4 { 
+    animation-delay: 0.45s;
+}
+
+.membership-card {
+  opacity: 0;
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+dialog {
+  border: 1px solid var(--color-primary-dark);
+  border-radius: .25rem;
+  padding: 1rem;
+  background-color: #fff;
+  box-shadow: 0 0 3rem #777;
+  width: 90%;
+  max-width: 600px;
+}
+
+::backdrop {
+  background-color: var(--color-primary-dark);
+}
+
+dialog button {
+  position: absolute;
+  top: 23px;
+  right: 23px;
+  padding: .5rem 1rem;
+  border: 1px solid var(--color-primary-dark);
+}

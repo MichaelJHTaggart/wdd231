@@ -17,6 +17,7 @@
     <script src="./scripts/navigation.js" defer></script>
     <script src="./scripts/current-weather.js" defer></script>
     <script src="./scripts/weather-forecast.js" defer></script>
+    <script src="./scripts/modal.js" defer></script>
 
 
     <meta property="og:title" content="COS Chamber of Commerce | Directory">
@@ -47,74 +48,101 @@
     <main class="main-home">
         <h1>One of us.... One of us...</h1>
 
-        <form action="./thankyou.html" method="get">
-            <div class="form-group">
-                <label for="firstName">First Name:</label>
-                <input name="firstName" id="firstName" type="text" autocomplete="given-name" required />
-            </div>
-
-            <div class="form-group">
-                <label for="lastName">Last Name:</label>
-                <input name="lastName" id="lastName" type="text" autocomplete="family-name" required />
-            </div>
-
-            <div class="form-group">
-                <label for="orgTitle">Organization Title:</label>
-                <input name="orgTitle" id="orgTitle" type="text" autocomplete="organization-title" pattern="^[A-Za-z -]{7,}$">
-            </div>
-
-            <div class="form-group">
-                <label for="email">Email:</label>
-                <input name="email" id="email" type="email" autocomplete="email@example.com" required />
-            </div>
-
-            <div class="form-group">
-                <label for="phone">Mobile Phone Number:</label>
-                <input name="phone" id="phone" type="tel" autocomplete="888-888-8888" required />
-            </div>
+        <div class="form-and-section">
+            <form action="./thankyou.html" method="get">
+                <div class="form-group">
+                    <label for="firstName">First Name:</label>
+                    <input name="firstName" id="firstName" type="text" autocomplete="given-name" required />
+                </div>
+                <div class="form-group">
+                    <label for="lastName">Last Name:</label>
+                    <input name="lastName" id="lastName" type="text" autocomplete="family-name" required />
+                </div>
+                <div class="form-group">
+                    <label for="orgTitle">Organization Title:</label>
+                    <input name="orgTitle" id="orgTitle" type="text" autocomplete="organization-title" pattern="^[A-Za-z -]{7,}$">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input name="email" id="email" type="email" autocomplete="email@example.com" required />
+                </div>
+                <div class="form-group">
+                    <label for="phone">Mobile Phone Number:</label>
+                    <input name="phone" id="phone" type="tel" autocomplete="888-888-8888" required />
+                </div>
             
-            <div class="form-group">
-                <label for="businessName">Business/Organization Name:</label>
-                <input name="businessName" id="businessName" type="text" autocomplete="organization" required />
-            </div>
+                <div class="form-group">
+                    <label for="businessName">Business/Organization Name:</label>
+                    <input name="businessName" id="businessName" type="text" autocomplete="organization" required />
+                </div>
             
-            <div class="form-group">
-                <fieldset required>
-                    <legend>Select Membership Level:</legend>
-                    <div>
-                        <input type="radio" id="np" name="membership-level" value="np" checked />
-                        <label for="np">NP Membership is for non profit organizations and there is no fee</label>
-                    </div>
-                    <div>
-                        <input type="radio" id="bronze" name="membership-level" value="bronze" />
-                        <label for="bronze">Bronze Membership</label>
-                    </div>
-                    <div>
-                        <input type="radio" id="silver" name="membership-level" value="silver" />
-                        <label for="silver">Silver Membership</label>
-                    </div>
-                    <div>
-                        <input type="radio" id="gold" name="membership-level" value="gold" />
-                        <label for="gold">Gold Membership</label>
-                    </div>
-                </fieldset>
-            </div>
+                <div class="form-group">
+                    <fieldset required>
+                        <legend>Select Membership Level:</legend>
+                        <div>
+                            <input type="radio" id="np" name="membership-level" value="np" checked />
+                            <label for="np">NP Membership is for non profit organizations and there is no fee</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="bronze" name="membership-level" value="bronze" />
+                            <label for="bronze">Bronze Membership</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="silver" name="membership-level" value="silver" />
+                            <label for="silver">Silver Membership</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="gold" name="membership-level" value="gold" />
+                            <label for="gold">Gold Membership</label>
+                        </div>
+                    </fieldset>
+                </div>
+                <div class="form-group">
+                    <label for="description">Tell us about your business or organization:</label>
+                    <textarea id="description" name="description" rows="5" cols="33">
+                        It was a dark and stormy night...
+                    </textarea>
+                </div>
+                <input id="timestamp" name="timestamp" type="hidden">
+                <button type="submit">Join Membership</button>
+            </form>
+            <script>
+                document.getElementById("timestamp").value = new Date().toISOString();
+            </script>
 
-            <div class="form-group">
-                <label for="description">Tell us about your business or organization:</label>
-                <textarea id="description" name="description" rows="5" cols="33">
-                    It was a dark and stormy night...
-                </textarea>
-            </div>
+            <section class="membership-cards">
 
-            <input id="timestamp" name="timestamp" type="hidden">
+                <div class="membership-card card-1">
+                    <h3>NP Membership</h3>
+                    <p class="price">Free</p>
+                    <p class="tagline">For Non-Profit Organizations</p>
+                    <a id="np-details" class="learn-more">Learn More</a>
+                </div>
+            
+                <div class="membership-card card-2">
+                    <h3>Bronze Membership</h3>
+                    <p class="price">$250/year</p>
+                    <p class="tagline">Essential Benefits for Growing Businesses</p>
+                    <a id="bronze-details" class="learn-more">Learn More</a>
+                </div>
+            
+                <div class="membership-card card-3">
+                    <h3>Silver Membership</h3>
+                    <p class="price">$500/year</p>
+                    <p class="tagline">Enhanced Visibility & Networking</p>
+                    <a id="silver-details" class="learn-more">Learn More</a>
+                </div>
+            
+                <div class="membership-card card-4">
+                    <h3>Gold Membership</h3>
+                    <p class="price">$1,000/year</p>
+                    <p class="tagline">Premium Benefits & Maximum Exposure</p>
+                    <a id="gold-details" class="learn-more">Learn More</a>
+                </div>
 
-            <button type="submit">Join Membership</button>
+            </section>
 
-        </form>
-        <script>
-            document.getElementById("timestamp").value = new Date().toISOString();
-        </script>
+        <dialog id="membership-details"></dialog>
     </main>
     <footer>
         <div>
