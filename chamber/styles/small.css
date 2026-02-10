@@ -444,3 +444,77 @@ dialog button {
  .membership-cards > h2{
     text-align: center;
  }
+
+.discover-title {
+    text-align: center;
+    margin: 1rem 0;
+}
+
+#visit-message {
+    text-align: center;
+    margin: 0 0 1rem 0;
+    padding: 0.75rem;
+    background-color: var(--color-primary-light);
+    color: var(--color-primary);
+    border: 1px solid var(--color-accent);
+    border-radius: 0.4rem;
+}
+
+#discover-cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 0 0.7rem;
+}
+
+.discover-card {
+    display: grid;
+    grid-template-areas:
+        "card-title"
+        "card-figure"
+        "card-address"
+        "card-description"
+        "card-link";
+    gap: 0.5rem;
+    border: solid 1px var(--color-accent);
+    padding: 1rem;
+    box-shadow: 5px 5px 5px 5px var(--color-primary);
+    background-color: var(--color-primary-light);
+    color: var(--color-primary);
+}
+
+.discover-card-title { 
+    grid-area: card-title; 
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+.discover-card-figure { 
+    grid-area: card-figure;
+    margin: 0;
+}
+
+.discover-card-address {
+    grid-area: card-address;
+    font-style: normal;
+    margin: 0;
+}
+
+.discover-card-description { 
+    grid-area: card-description; 
+    margin: 0;
+}
+
+.discover-card-link { 
+    grid-area: card-link;
+    color: var(--color-primary);
+    text-align: center;
+    display: block;
+}
+
+.discover-card-figure img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 0.4rem;
+}

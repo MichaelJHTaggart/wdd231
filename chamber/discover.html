@@ -3,28 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="The home page for the Chamber of Commerce in Colorado Springs">
+    <meta name="description" content="Discover places of interest in the Colorado Springs area">
     <meta name="author" content="Michael J.H. Taggart">
     <link rel="stylesheet" href="./styles/normalize.css">
     <link rel="stylesheet" href="./styles/small.css">
+    <link rel="stylesheet" href="./styles/medium.css">
     <link rel="stylesheet" href="./styles/larger.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="icon" href="images/favicon.ico">
-    <link href="https://fonts.googleapis.com/css2?family=Fira+Code&family=Inter:opsz@14..32&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code&family=Inter:opsz@14..32&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900&display=swap" rel="stylesheet">
     <script src="./scripts/date.js" defer></script>
-    <script src="./scripts/random-business-spotlight.js" defer></script>
     <script src="./scripts/navigation.js" defer></script>
-    <script src="./scripts/current-weather.js" defer></script>
-    <script src="./scripts/weather-forecast.js" defer></script>
+    <script src="./scripts/discover.js" type="module"></script>
+    <script src="./scripts/discover-message.js" defer></script>
 
-
-    <meta property="og:title" content="COS Chamber of Commerce | Directory">
-    <meta property="og:description" content="Home page for the COS Chamber of Commerce project by Michael J.H. Taggart, course work, personal background, and web development studies.">
-    <meta property="og:url" content="https://michaeljhtaggart.github.io/wdd231/">
+    <meta property="og:title" content="COS Chamber of Commerce | Discover">
+    <meta property="og:description" content="Discover places of interest in the Colorado Springs area.">
+    <meta property="og:url" content="https://michaeljhtaggart.github.io/wdd231/chamber/discover.html">
     <meta property="og:image" content="https://michaeljhtaggart.github.io/wdd231/images/portfolio-desktop.webp">
 
-    <title>Directory for COS Chamber of Commerce</title>
+    <title>Discover the area around the COS Chamber of Commerce</title>
 </head>
 <body>
     <header>
@@ -39,43 +38,17 @@
             <ol>
                 <li><a href="./index.html">Home</a></li>
                 <li><a href="./directory.html">Directory</a></li>
-                <li><a href="#">Chamber</a></li>
-                <li><a href="#">Final</a></li>
+                <li><a href="./discover.html">Discover</a></li>
+                <li><a href="./join.html">Join</a></li>
+                <li><a href="#" title="Chamber of Commerce">Chamber</a></li>
+                <li><a href="#" title="Coming soon">Final</a></li>
             </ol>
         </nav>
     </header>
-    <main class="main-home">
-        <div class="hero-wrapper">
-            <picture class="picture-hero">
-                <source srcset="./images/hero-desktop.webp 1280w" media="(min-width: 550px)" sizes="1280px">
-                <img class="hero-image-small" src="./images/hero-mobile-2.webp" alt="Colorado Springs Downtown area" width="360" height="202">
-            </picture>
-            <button id="cta">Keynote Tickets</button>
-        </div>
-
-        <div class="home-wrapper">
-            <h1>Home</h1>
-            <section>
-                <h2 class="styled-block-header bigger">Events</h2>
-                <div class="styled-block-content-wrapper tall"></div>
-            </section>
-            <section id="currentWeather">
-                <h2 class="styled-block-header bigger">Current Weather</h2>
-                <div class="styled-block-content-wrapper">
-                    <!-- Image -->
-                    <div id="weather-info">
-
-                    </div>
-                </div>
-            </section>
-            <section id="weatherForecast">
-                <h2 class="styled-block-header bigger">Weather Forecast</h2>
-                <div id="three-day-forecast" class="styled-block-content-wrapper">
-                    <!-- Next 3 day forecast -->
-                </div>
-            </section>
-            <section id="business-spotlight">
-            </section>
+    <main class="main main-discover">
+        <h1 class="discover-title">Discover Colorado Springs</h1>
+        <p id="visit-message"></p>
+        <div id="discover-cards">
         </div>
     </main>
     <footer>
@@ -87,14 +60,14 @@
             <p>(719) 555-4827</p>
         </div>
         <ol class="social">
-            <li><a href="https://github.com/MichaelJHTaggart" target="_blank"><img src="images/github.svg" alt="github" width="16" height="16"></a></li>
-            <li><a href="https://www.linkedin.com/in/michaeljhtaggart/" target="_blank"><img src="images/linkedin.svg" alt="linkedin" width="16" height="16"></a></li>
-            <li><a href="https://www.twitch.tv/b1ueh4wk" target="_blank"><img src="images/twitch.svg" alt="twitch" width="16" height="16"></a></li>
-        </ol> 
+            <li><a href="https://github.com/MichaelJHTaggart" target="_blank" rel="noopener noreferrer"><img src="images/github.svg" alt="github" width="16" height="16"></a></li>
+            <li><a href="https://www.linkedin.com/in/michaeljhtaggart/" target="_blank" rel="noopener noreferrer"><img src="images/linkedin.svg" alt="linkedin" width="16" height="16"></a></li>
+            <li><a href="https://www.twitch.tv/b1ueh4wk" target="_blank" rel="noopener noreferrer"><img src="images/twitch.svg" alt="twitch" width="16" height="16"></a></li>
+        </ol>
         <div>
             <span id="currentyear"></span>
             <span>|</span>
-            <span>Michel J.H. Taggart</span>
+            <span>Michael J.H. Taggart</span>
             <span>|</span>
             <span>Colorado, USA</span>
         </div>

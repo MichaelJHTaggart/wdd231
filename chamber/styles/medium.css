@@ -1,0 +1,27 @@
+@media only screen and (min-width: 641px) and (max-width: 1024px) {
+    .discover-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .discover-card {
+        grid-template-areas:
+            "card-figure card-title"
+            "card-figure card-address"
+            "card-figure card-description"
+            "card-figure card-link";
+        grid-template-columns: minmax(200px, 40%) 1fr;
+    }
+    
+    .discover-card-figure {
+        overflow: hidden;
+        border-radius: 0.4rem;
+    }
+    
+    .discover-card-figure img {
+        transition: transform 0.3s ease;
+    }
+    
+    .discover-card-figure:hover img {
+        transform: scale(1.05);
+    }
+}
