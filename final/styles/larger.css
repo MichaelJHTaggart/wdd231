@@ -1,0 +1,30 @@
+:root {
+    --color-bg-main: #0b1220;
+    --color-bg-section: #121a2b;
+    --color-text-primary: #e7efff;
+    --color-accent-primary: #ff7676;
+    --color-accent-secondary: #9bdfff;
+    --color-border-subtle: #2a3553;
+
+    --font-heading: 'Cinzel', serif;
+    --font-body: 'Inter', sans-serif;
+}
+@media only screen and (min-width: 38rem) {
+
+    .hamburger {
+        display: none;
+    }
+
+    .navigation {
+        display: block;
+    }
+
+    .navigation ul {
+        display: flex;
+    }
+
+    .navigation a {
+        border: none;
+    }
+
+}
