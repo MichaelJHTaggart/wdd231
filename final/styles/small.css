@@ -136,6 +136,7 @@ ol {
     border-radius: 50%;
 }
 
+/* Character Viewer Styles */
 .character-viewer {
     width: 100%;
     max-width: 400px;
@@ -146,21 +147,44 @@ ol {
     touch-action: none;
     cursor: grab;
     overflow: hidden;
+    position: relative;
+    background-color: #1a1a1a;
 }
 
+.character-viewer video,
 .character-viewer img {
     width: 100%;
-    height: 550px;
+    height: 100%;
     display: block;
     pointer-events: none;
     object-fit: cover;
-    object-position: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: opacity 0.3s ease;
 }
 
-#character-rotate{
-    width: auto;
+/* Mobile - shift character left to center better */
+@media (max-width: 768px) {
+    .character-viewer video,
+    .character-viewer img {
+        object-position: 40% center;
+    }
 }
 
-.height{
+/* Desktop */
+@media (min-width: 769px) {
+    .character-viewer {
+        max-width: 550px;
+        height: 680px;
+    }
+    
+    .character-viewer video,
+    .character-viewer img {
+        object-position: 45% center;
+    }
+}
+
+.height {
     height: 100%;
 }
