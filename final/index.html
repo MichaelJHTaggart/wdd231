@@ -11,9 +11,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 
-    <!-- <script src="./scripts/course.js" defer></script> -->
     <script src="./scripts/characterRotation.js" defer></script>
-    <script src="./scripts/navigation.js" defer></script> 
+    <script src="./scripts/navigation.js" defer></script>
+    <script src="./scripts/modals.js" defer></script>
 
     <meta property="og:title" content="Play Guild Wars 2">
     <meta property="og:description" content="Home page for the Play Guild Wars 2 project by Michael J.H. Taggart, course work, personal background, and web development studies.">
@@ -43,117 +43,106 @@
             <span><strong>Guild Wars 2!</strong></span>
         </div>
 
-        <section>
+        <section class="hero-section">
             <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/uaXGbBlt8v0?si=DmE61fwuf9FJBZ1Z&amp;controls=0&amp;autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-             <button>Play Now!</button>
+            <button class="play-now-btn cta-btn">Play Now!</button>
         </section>
 
-        <section class="height">
-            <h2>Why should you play?</h2>
-            <p><em>Some reasons from my first Character: Syavirnah</em></p>
-
-            <div class="character-viewer">
-                <video 
-                    id="character-video" 
-                    autoplay 
-                    loop 
-                    muted 
-                    playsinline
-                    preload="auto"
-                >
-                    <source src="./images/character/video-loop.mp4" type="video/mp4">
-                </video>
-                
-                <img 
-                    id="character-rotate" 
-                    src="./images/character/1.webp" 
-                    alt="Sylvari character rotation" 
-                    draggable="false"
-                >
-            </div>
-
-            <p>
-                I stumbled upon Guild Wars 2 while up late with a newborn baby who was struggling to sleep.
-                I downloaded the game and just to keep myself awake, and to be busy doing something.
-                I just jumped on the 10-hour free trial raptor, and just rode around the map.
-                I quickly found that there were areas of the map I could not go without immediately dying.
-                I consistently noticed that events kept popping up for me to participate in, no matter where I went on the map, and some of them were very tempting to stop riding and see what was going on.
-                Sometimes I would go by HUGE groups of monsters, and large groups of players fighting them, but a lot of times it was just me and my raptor trying to survive.
-                By the end of the free 10 hour trial, I had so many places that I wanted to go back to, so many places I wanted to learn more about.
-                So many adventures I couldn't wait to have.
-                Well I spent quite a bit of time traveling around to those places I had seen, and something in particular hooked me.
-                I loved walking back through a land, and being notified of something that needed my assistance.
-                I would walk up and start helping out with the task.
-                Well after spending a significant amount of time doing this I was kind of burned out of the tasks in a particular area. 
-                I decided to follow a group of players who were following an NPC with green box above his head.
-                I thought it was funny to follow the group of players and cast healing spells on them as they walked, but I couldn't figure out what they were doing.
-                Then suddenly out of nowhere, the NPC attacked!
-                I was completely taken off guard. It was super strong, and actually killed me at some point in the fight.
-                Luckily was able to get back to the fight quickly, and help finish him off. 
-                After the battle, the NPC disappeared. I chatted to the group of players to see if they would let me know what happened.
-                And that is when I learned about guilds (groups of players who play together), and where I was introduced to the absolute MASSIVE world that is Guild Wars 2.
-                Up to that point. I had only played only 1 little part of the game. There was so. much. more!
-                There were other maps, other game modes, and even other skills my character could do.
-                And the most valuable part to me was the amazing group of people that I had found who wanted to play it all with me.
-                They wanted to share the victories and failures together with me.
-                I was led by the hand by many patient veterans into training grounds to help me learn how to play better.
-                And I was introduced into all of the different game modes that Guild Wars 2 had to offer.
-            </p>
-
-            <button>Find Out More</button>
-        </section>
-
-        <section>
+        <section class="selector-section">
             <h2>Race Options:</h2>
-
-            <div>
-                <img src="" alt="">
-                <ol>
-                    <li><img src="" alt="Asura">Asura</li>
-                    <li><img src="" alt="Sylvari">Sylvari</li>
-                    <li><img src="" alt="Human">Human</li>
-                    <li><img src="" alt="Norn">Norn</li>
-                    <li><img src="" alt="Charr">Charr</li>
-                </ol>
+            <div class="selector-wrapper">
+                <div class="selector-right">
+                    <div class="selector-cover-frame">
+                        <img id="race-cover" src="" alt="">
+                    </div>
+                    <div class="selector-description-frame" id="race-description" aria-live="polite"></div>
+                    <div class="selector-options-frame selector-options-frame--race">
+                        <ol id="race-list">
+                        <li data-race="norn"><span class="selector-icon-frame"><img src="./images/race/selector/1-norn-icon.webp" alt="Norn"></span>Norn</li>
+                        <li data-race="sylvari"><span class="selector-icon-frame"><img src="./images/race/selector/2-sylvari-icon.webp" alt="Sylvari"></span>Sylvari</li>
+                        <li data-race="human"><span class="selector-icon-frame"><img src="./images/race/selector/3-human-icon.webp" alt="Human"></span>Human</li>
+                        <li data-race="asura"><span class="selector-icon-frame"><img src="./images/race/selector/4-asura-icon.webp" alt="Asura"></span>Asura</li>
+                        <li data-race="charr"><span class="selector-icon-frame"><img src="./images/race/selector/5-charr-icon.webp" alt="Charr"></span>Charr</li>
+                    </ol>
+                    </div>
+                </div>
             </div>
-            <button>Learn Lore</button>
+            <button id="race-learn-lore" class="cta-btn">Learn Lore</button>
         </section>
 
-        <section>
+        <section class="selector-section">
             <h2>Profession Options:</h2>
-
-            <div>
-                <img src="" alt="">
-                <ol>
-                    <li><img src="" alt="Mesmer">Mesmer</li>
-                    <li><img src="" alt="Guardian">Guardian</li>
-                    <li><img src="" alt="Necromancer">Necromancer</li>
-                    <li><img src="" alt="Elementalist">Elementalist</li>
-                    <li><img src="" alt="Warrior">Warrior</li>
-                    <li><img src="" alt="Thief">Thief</li>
-                    <li><img src="" alt="Engineer">Engineer</li>
-                    <li><img src="" alt="Revenant">Revenant</li>
-                </ol>
+            <div class="selector-wrapper">
+                <div class="selector-right">
+                    <div class="selector-cover-frame">
+                        <img id="profession-cover" src="" alt="">
+                    </div>
+                    <div class="selector-description-frame" id="profession-description" aria-live="polite"></div>
+                    <div class="selector-options-frame">
+                        <ol id="profession-list">
+                        <li data-profession="necromancer"><span class="selector-icon-frame"><img src="./images/profession/selector/1-necromancer-icon.webp" alt="Necromancer"></span>Necromancer</li>
+                        <li data-profession="ranger"><span class="selector-icon-frame"><img src="./images/profession/selector/2-ranger-icon.webp" alt="Ranger"></span>Ranger</li>
+                        <li data-profession="warrior"><span class="selector-icon-frame"><img src="./images/profession/selector/3-warrior-icon.webp" alt="Warrior"></span>Warrior</li>
+                        <li data-profession="guardian"><span class="selector-icon-frame"><img src="./images/profession/selector/4-guardian-icon.webp" alt="Guardian"></span>Guardian</li>
+                        <li data-profession="mesmer"><span class="selector-icon-frame"><img src="./images/profession/selector/5-mesmer-icon.webp" alt="Mesmer"></span>Mesmer</li>
+                        <li data-profession="revenant"><span class="selector-icon-frame"><img src="./images/profession/selector/6-revenant-icon.webp" alt="Revenant"></span>Revenant</li>
+                        <li data-profession="thief"><span class="selector-icon-frame"><img src="./images/profession/selector/7-theif-icon.webp" alt="Thief"></span>Thief</li>
+                        <li data-profession="engineer"><span class="selector-icon-frame"><img src="./images/profession/selector/8-engineer-icon.webp" alt="Engineer"></span>Engineer</li>
+                        <li data-profession="elementalist"><span class="selector-icon-frame"><img src="./images/profession/selector/9-elementalist-icon.webp" alt="Elementalist"></span>Elementalist</li>
+                    </ol>
+                    </div>
+                </div>
             </div>
-            <button>Learn More</button>
+            <button id="profession-learn-more" class="cta-btn">Learn More</button>
+        </section>
+
+        <section class="height story-section">
+            <h2>Why should you play?</h2>
+            <div class="story-layout">
+                <div class="story-media">
+                    <div class="character-viewer">
+                        <video 
+                            id="character-video" 
+                            autoplay 
+                            loop 
+                            muted 
+                            playsinline
+                            preload="auto"
+                        >
+                            <source src="./images/character/video-loop.mp4" type="video/mp4">
+                        </video>
+                        <img 
+                            id="character-rotate" 
+                            src="./images/character/1.webp" 
+                            alt="Sylvari character rotation" 
+                            draggable="false"
+                        >
+                    </div>
+                </div>
+                <div class="story-content">
+                    <p class="story-subtitle"><em>Some reasons from my first Character: Syavirnah</em></p>
+                    <div class="story-text" id="story-text" aria-live="polite"></div>
+                    <button id="find-out-more" class="cta-btn">My Story</button>
+                </div>
+            </div>
         </section>
         
         <section>
             <div>
                 <h2>Want to play with others?</h2>
-                <button>Find Friends</button>
+                <a href="./guild.html" class="cta-btn">Find Friends</a>
             </div>
             <div>
                 <h2>Ready to Start Playing?</h2>
-                <button>Play Now</button>
+                <button id="play-now-bottom" class="cta-btn">Play Now</button>
             </div>
             <div>
                 <h2>Game Resources</h2>
-                <button>Research</button>
+                <a href="./resources.html" class="cta-btn">Research</a>
             </div>
         </section>
-        
 
+        <dialog id="gw2-modal"></dialog>
     </main>
     <footer>
 
