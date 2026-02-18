@@ -17,7 +17,7 @@ if (characterViewer && characterVideo && characterImg) {
     const imageFolder = isMobile ? './images/character/mobile' : './images/character';
 
     function updateImage(frameNumber) {
-        characterImg.src = `${imageFolder}/sylvari-character-rotation-frame-${frameNumber}.webp`;
+        characterImg.src = `${imageFolder}/sylvari-frame-${frameNumber}.webp`;
     }
 
     function switchToImageMode() {
