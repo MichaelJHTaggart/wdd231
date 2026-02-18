@@ -159,4 +159,18 @@
         justify-items: center;
     }
 
+    .selector-section[data-profession="guardian"] #profession-cover,
+    .selector-section[data-profession="warrior"] #profession-cover,
+    .selector-section[data-profession="necromancer"] #profession-cover,
+    .selector-section[data-profession="ranger"] #profession-cover,
+    .selector-section[data-profession="elementalist"] #profession-cover {
+        transform: none;
+    }
+
+    .selector-section[data-race="charr"] #race-cover,
+    .selector-section[data-race="sylvari"] #race-cover,
+    .selector-section[data-race="human"] #race-cover {
+        transform: none;
+    }
+
 }

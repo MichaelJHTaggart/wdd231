@@ -134,6 +134,8 @@ const raceDescriptionEl = document.getElementById("race-description");
 
 function setRaceCover(raceKey, preserveScrollY) {
     const race = raceDetails[raceKey];
+    const raceSection = raceList?.closest(".selector-section");
+    if (raceSection) raceSection.dataset.race = raceKey;
     if (raceCover && race) {
         if (preserveScrollY != null) {
             raceCover.onload = () => {
@@ -142,7 +144,7 @@ function setRaceCover(raceKey, preserveScrollY) {
             };
         }
         raceCover.src = race.coverImage;
-        raceCover.alt = race.name;
+        raceCover.alt = `${race.name} race cover artwork`;
         raceCover.onerror = () => { raceCover.src = imagePlaceholder; };
     }
     if (raceDescriptionEl && race) {
@@ -201,6 +203,8 @@ const professionDescriptionEl = document.getElementById("profession-description"
 
 function setProfessionCover(profKey, preserveScrollY) {
     const prof = professionDetails[profKey];
+    const professionSection = professionList?.closest(".selector-section");
+    if (professionSection) professionSection.dataset.profession = profKey;
     if (professionCover && prof) {
         if (preserveScrollY != null) {
             professionCover.onload = () => {
@@ -209,7 +213,7 @@ function setProfessionCover(profKey, preserveScrollY) {
             };
         }
         professionCover.src = prof.coverImage;
-        professionCover.alt = prof.name;
+        professionCover.alt = `${prof.name} profession cover artwork`;
         professionCover.onerror = () => { professionCover.src = imagePlaceholder; };
     }
     if (professionDescriptionEl && prof) {

@@ -7,26 +7,27 @@
     <meta name="author" content="Michael J.H. Taggart">
     <link rel="stylesheet" href="./styles/small.css">
     <link rel="stylesheet" href="./styles/larger.css">
+    <link rel="icon" href="./images/favicon.svg" type="image/svg+xml">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 
-    <script src="./scripts/characterRotation.js" defer></script>
+    <script src="./scripts/character-rotation.js" defer></script>
     <script src="./scripts/navigation.js" defer></script>
     <script src="./scripts/modals.js" defer></script>
 
     <meta property="og:title" content="Play Guild Wars 2">
     <meta property="og:description" content="Home page for the Play Guild Wars 2 project by Michael J.H. Taggart, course work, personal background, and web development studies.">
     <meta property="og:url" content="https://gw2.michaeljhtagart.com/">
-    <meta property="og:image" content="https://gw2.michaeljhtagart.com/images/portfolio-desktop.webp">
+    <meta property="og:image" content="https://gw2.michaeljhtagart.com/images/og-image.webp">
 
     <title>Play Guild Wars 2</title>
 </head>
 <body>  
     <header>
-        <img class="logo-gif" src="./images/logo.gif" alt="Site Logo" width="48" height="48">
+        <img class="logo-gif" src="./images/logo.webp" alt="Site Logo" width="48" height="48">
         <span>Info about Guild Wars 2</span>
-        <button id="ham-btn" class="hamburger"></button>
+        <button id="ham-btn" class="hamburger" aria-label="Open navigation menu"></button>
         
         <nav id="nav-bar" class="navigation">
             <ol>
@@ -44,25 +45,27 @@
         </div>
 
         <section class="hero-section">
-            <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/uaXGbBlt8v0?si=DmE61fwuf9FJBZ1Z&amp;controls=0&amp;autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <h2 id="hero-heading" class="visually-hidden">Featured Guild Wars 2 trailer</h2>
+            <!-- <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/uaXGbBlt8v0?si=DmE61fwuf9FJBZ1Z&amp;controls=0&amp;autoplay=1" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> -->
+            <img class="hero-image" src="./images/hero-trailer-thumbnail.webp" alt="Guild Wars 2 trailer thumbnail - watch on YouTube" width="560" height="315">
             <button class="play-now-btn cta-btn">Play Now!</button>
         </section>
 
-        <section class="selector-section">
+        <section class="selector-section" id="race-selector-section" data-race="norn">
             <h2>Race Options:</h2>
             <div class="selector-wrapper">
                 <div class="selector-right">
                     <div class="selector-cover-frame">
-                        <img id="race-cover" src="" alt="">
+                        <img id="race-cover" src="./images/race/cover/1-norn-cover.webp" alt="Norn race cover artwork">
                     </div>
                     <div class="selector-description-frame" id="race-description" aria-live="polite"></div>
                     <div class="selector-options-frame selector-options-frame--race">
                         <ol id="race-list">
-                        <li data-race="norn"><span class="selector-icon-frame"><img src="./images/race/selector/1-norn-icon.webp" alt="Norn"></span>Norn</li>
-                        <li data-race="sylvari"><span class="selector-icon-frame"><img src="./images/race/selector/2-sylvari-icon.webp" alt="Sylvari"></span>Sylvari</li>
-                        <li data-race="human"><span class="selector-icon-frame"><img src="./images/race/selector/3-human-icon.webp" alt="Human"></span>Human</li>
-                        <li data-race="asura"><span class="selector-icon-frame"><img src="./images/race/selector/4-asura-icon.webp" alt="Asura"></span>Asura</li>
-                        <li data-race="charr"><span class="selector-icon-frame"><img src="./images/race/selector/5-charr-icon.webp" alt="Charr"></span>Charr</li>
+                        <li data-race="norn"><span class="selector-icon-frame"><img src="./images/race/selector/1-norn-icon.webp" alt="Norn race icon"></span>Norn</li>
+                        <li data-race="sylvari"><span class="selector-icon-frame"><img src="./images/race/selector/2-sylvari-icon.webp" alt="Sylvari race icon"></span>Sylvari</li>
+                        <li data-race="human"><span class="selector-icon-frame"><img src="./images/race/selector/3-human-icon.webp" alt="Human race icon"></span>Human</li>
+                        <li data-race="asura"><span class="selector-icon-frame"><img src="./images/race/selector/4-asura-icon.webp" alt="Asura race icon"></span>Asura</li>
+                        <li data-race="charr"><span class="selector-icon-frame"><img src="./images/race/selector/5-charr-icon.webp" alt="Charr race icon"></span>Charr</li>
                     </ol>
                     </div>
                 </div>
@@ -70,25 +73,25 @@
             <button id="race-learn-lore" class="cta-btn">Learn Lore</button>
         </section>
 
-        <section class="selector-section">
+        <section class="selector-section" id="profession-selector-section" data-profession="necromancer">
             <h2>Profession Options:</h2>
             <div class="selector-wrapper">
                 <div class="selector-right">
                     <div class="selector-cover-frame">
-                        <img id="profession-cover" src="" alt="">
+                        <img id="profession-cover" src="./images/profession/cover/1-necromancer-cover.webp" alt="Necromancer profession cover artwork">
                     </div>
                     <div class="selector-description-frame" id="profession-description" aria-live="polite"></div>
                     <div class="selector-options-frame">
                         <ol id="profession-list">
-                        <li data-profession="necromancer"><span class="selector-icon-frame"><img src="./images/profession/selector/1-necromancer-icon.webp" alt="Necromancer"></span>Necromancer</li>
-                        <li data-profession="ranger"><span class="selector-icon-frame"><img src="./images/profession/selector/2-ranger-icon.webp" alt="Ranger"></span>Ranger</li>
-                        <li data-profession="warrior"><span class="selector-icon-frame"><img src="./images/profession/selector/3-warrior-icon.webp" alt="Warrior"></span>Warrior</li>
-                        <li data-profession="guardian"><span class="selector-icon-frame"><img src="./images/profession/selector/4-guardian-icon.webp" alt="Guardian"></span>Guardian</li>
-                        <li data-profession="mesmer"><span class="selector-icon-frame"><img src="./images/profession/selector/5-mesmer-icon.webp" alt="Mesmer"></span>Mesmer</li>
-                        <li data-profession="revenant"><span class="selector-icon-frame"><img src="./images/profession/selector/6-revenant-icon.webp" alt="Revenant"></span>Revenant</li>
-                        <li data-profession="thief"><span class="selector-icon-frame"><img src="./images/profession/selector/7-theif-icon.webp" alt="Thief"></span>Thief</li>
-                        <li data-profession="engineer"><span class="selector-icon-frame"><img src="./images/profession/selector/8-engineer-icon.webp" alt="Engineer"></span>Engineer</li>
-                        <li data-profession="elementalist"><span class="selector-icon-frame"><img src="./images/profession/selector/9-elementalist-icon.webp" alt="Elementalist"></span>Elementalist</li>
+                        <li data-profession="necromancer"><span class="selector-icon-frame"><img src="./images/profession/selector/1-necromancer-icon.webp" alt="Necromancer profession icon"></span>Necromancer</li>
+                        <li data-profession="ranger"><span class="selector-icon-frame"><img src="./images/profession/selector/2-ranger-icon.webp" alt="Ranger profession icon"></span>Ranger</li>
+                        <li data-profession="warrior"><span class="selector-icon-frame"><img src="./images/profession/selector/3-warrior-icon.webp" alt="Warrior profession icon"></span>Warrior</li>
+                        <li data-profession="guardian"><span class="selector-icon-frame"><img src="./images/profession/selector/4-guardian-icon.webp" alt="Guardian profession icon"></span>Guardian</li>
+                        <li data-profession="mesmer"><span class="selector-icon-frame"><img src="./images/profession/selector/5-mesmer-icon.webp" alt="Mesmer profession icon"></span>Mesmer</li>
+                        <li data-profession="revenant"><span class="selector-icon-frame"><img src="./images/profession/selector/6-revenant-icon.webp" alt="Revenant profession icon"></span>Revenant</li>
+                        <li data-profession="thief"><span class="selector-icon-frame"><img src="./images/profession/selector/7-theif-icon.webp" alt="Thief profession icon"></span>Thief</li>
+                        <li data-profession="engineer"><span class="selector-icon-frame"><img src="./images/profession/selector/8-engineer-icon.webp" alt="Engineer profession icon"></span>Engineer</li>
+                        <li data-profession="elementalist"><span class="selector-icon-frame"><img src="./images/profession/selector/9-elementalist-icon.webp" alt="Elementalist profession icon"></span>Elementalist</li>
                     </ol>
                     </div>
                 </div>
@@ -113,7 +116,7 @@
                         </video>
                         <img 
                             id="character-rotate" 
-                            src="./images/character/1.webp" 
+                            src="./images/character/sylvari-character-rotation-frame-1.webp" 
                             alt="Sylvari character rotation" 
                             draggable="false"
                         >
