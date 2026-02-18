@@ -12,9 +12,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 
-    <script src="./scripts/character-rotation.js" defer></script>
-    <script src="./scripts/navigation.js" defer></script>
-    <script src="./scripts/modals.js" defer></script>
+    <script type="module" src="./scripts/main.js"></script>
 
     <meta property="og:title" content="Play Guild Wars 2 | Free MMORPG - Michael J.H. Taggart">
     <meta property="og:description" content="Home page for the Play Guild Wars 2 project by Michael J.H. Taggart, course work, personal background, and web development studies.">
@@ -61,11 +59,11 @@
                     <div class="selector-description-frame" id="race-description" aria-live="polite"></div>
                     <div class="selector-options-frame selector-options-frame--race">
                         <ol id="race-list">
-                        <li data-race="norn"><span class="selector-icon-frame"><img src="./images/race/selector/1-norn-icon.webp" alt="Norn race icon"></span>Norn</li>
-                        <li data-race="sylvari"><span class="selector-icon-frame"><img src="./images/race/selector/2-sylvari-icon.webp" alt="Sylvari race icon"></span>Sylvari</li>
-                        <li data-race="human"><span class="selector-icon-frame"><img src="./images/race/selector/3-human-icon.webp" alt="Human race icon"></span>Human</li>
-                        <li data-race="asura"><span class="selector-icon-frame"><img src="./images/race/selector/4-asura-icon.webp" alt="Asura race icon"></span>Asura</li>
-                        <li data-race="charr"><span class="selector-icon-frame"><img src="./images/race/selector/5-charr-icon.webp" alt="Charr race icon"></span>Charr</li>
+                        <li data-race="norn"><span class="selector-icon-frame"><img src="./images/race/selector/1-norn-icon.webp" alt="Norn race icon" loading="lazy" width="80" height="80"></span>Norn</li>
+                        <li data-race="sylvari"><span class="selector-icon-frame"><img src="./images/race/selector/2-sylvari-icon.webp" alt="Sylvari race icon" loading="lazy" width="80" height="80"></span>Sylvari</li>
+                        <li data-race="human"><span class="selector-icon-frame"><img src="./images/race/selector/3-human-icon.webp" alt="Human race icon" loading="lazy" width="80" height="80"></span>Human</li>
+                        <li data-race="asura"><span class="selector-icon-frame"><img src="./images/race/selector/4-asura-icon.webp" alt="Asura race icon" loading="lazy" width="80" height="80"></span>Asura</li>
+                        <li data-race="charr"><span class="selector-icon-frame"><img src="./images/race/selector/5-charr-icon.webp" alt="Charr race icon" loading="lazy" width="80" height="80"></span>Charr</li>
                     </ol>
                     </div>
                 </div>
@@ -83,15 +81,15 @@
                     <div class="selector-description-frame" id="profession-description" aria-live="polite"></div>
                     <div class="selector-options-frame">
                         <ol id="profession-list">
-                        <li data-profession="necromancer"><span class="selector-icon-frame"><img src="./images/profession/selector/1-necromancer-icon.webp" alt="Necromancer profession icon"></span>Necromancer</li>
-                        <li data-profession="ranger"><span class="selector-icon-frame"><img src="./images/profession/selector/2-ranger-icon.webp" alt="Ranger profession icon"></span>Ranger</li>
-                        <li data-profession="warrior"><span class="selector-icon-frame"><img src="./images/profession/selector/3-warrior-icon.webp" alt="Warrior profession icon"></span>Warrior</li>
-                        <li data-profession="guardian"><span class="selector-icon-frame"><img src="./images/profession/selector/4-guardian-icon.webp" alt="Guardian profession icon"></span>Guardian</li>
-                        <li data-profession="mesmer"><span class="selector-icon-frame"><img src="./images/profession/selector/5-mesmer-icon.webp" alt="Mesmer profession icon"></span>Mesmer</li>
-                        <li data-profession="revenant"><span class="selector-icon-frame"><img src="./images/profession/selector/6-revenant-icon.webp" alt="Revenant profession icon"></span>Revenant</li>
-                        <li data-profession="thief"><span class="selector-icon-frame"><img src="./images/profession/selector/7-theif-icon.webp" alt="Thief profession icon"></span>Thief</li>
-                        <li data-profession="engineer"><span class="selector-icon-frame"><img src="./images/profession/selector/8-engineer-icon.webp" alt="Engineer profession icon"></span>Engineer</li>
-                        <li data-profession="elementalist"><span class="selector-icon-frame"><img src="./images/profession/selector/9-elementalist-icon.webp" alt="Elementalist profession icon"></span>Elementalist</li>
+                        <li data-profession="necromancer"><span class="selector-icon-frame"><img src="./images/profession/selector/1-necromancer-icon.webp" alt="Necromancer profession icon" loading="lazy" width="80" height="80"></span>Necromancer</li>
+                        <li data-profession="ranger"><span class="selector-icon-frame"><img src="./images/profession/selector/2-ranger-icon.webp" alt="Ranger profession icon" loading="lazy" width="80" height="80"></span>Ranger</li>
+                        <li data-profession="warrior"><span class="selector-icon-frame"><img src="./images/profession/selector/3-warrior-icon.webp" alt="Warrior profession icon" loading="lazy" width="80" height="80"></span>Warrior</li>
+                        <li data-profession="guardian"><span class="selector-icon-frame"><img src="./images/profession/selector/4-guardian-icon.webp" alt="Guardian profession icon" loading="lazy" width="80" height="80"></span>Guardian</li>
+                        <li data-profession="mesmer"><span class="selector-icon-frame"><img src="./images/profession/selector/5-mesmer-icon.webp" alt="Mesmer profession icon" loading="lazy" width="80" height="80"></span>Mesmer</li>
+                        <li data-profession="revenant"><span class="selector-icon-frame"><img src="./images/profession/selector/6-revenant-icon.webp" alt="Revenant profession icon" loading="lazy" width="80" height="80"></span>Revenant</li>
+                        <li data-profession="thief"><span class="selector-icon-frame"><img src="./images/profession/selector/7-theif-icon.webp" alt="Thief profession icon" loading="lazy" width="80" height="80"></span>Thief</li>
+                        <li data-profession="engineer"><span class="selector-icon-frame"><img src="./images/profession/selector/8-engineer-icon.webp" alt="Engineer profession icon" loading="lazy" width="80" height="80"></span>Engineer</li>
+                        <li data-profession="elementalist"><span class="selector-icon-frame"><img src="./images/profession/selector/9-elementalist-icon.webp" alt="Elementalist profession icon" loading="lazy" width="80" height="80"></span>Elementalist</li>
                     </ol>
                     </div>
                 </div>
@@ -110,7 +108,7 @@
                             loop 
                             muted 
                             playsinline
-                            preload="auto"
+                            preload="metadata"
                         >
                             <source src="./images/character/video-loop.mp4" type="video/mp4">
                         </video>
@@ -118,6 +116,7 @@
                             id="character-rotate" 
                             src="./images/character/sylvari-frame-1.webp" 
                             alt="Sylvari character rotation" 
+                            loading="lazy"
                             draggable="false"
                         >
                     </div>

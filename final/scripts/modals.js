@@ -88,9 +88,9 @@ const professionDetails = {
     }
 };
 
-const modal = document.querySelector("#gw2-modal");
+const imagePlaceholder = "./images/race/cover/1-norn-cover.webp";
 
-function showModal(content, section) {
+function showModal(modal, content, section) {
     if (!modal) return;
     if (section) {
         section.appendChild(modal);
@@ -114,14 +114,18 @@ const playNowModalContent = `
     </div>
 `;
 
-function showPlayNowModal(section) {
-    showModal(playNowModalContent, section);
+function showPlayNowModal(modal, section) {
+    showModal(modal, playNowModalContent, section);
 }
+
+export function initModals() {
+    const modal = document.querySelector("#gw2-modal");
+    if (!modal) return;
 
 const playNowHeroBtn = document.querySelector(".hero-section .play-now-btn");
 if (playNowHeroBtn) {
     playNowHeroBtn.addEventListener("click", () => {
-        showPlayNowModal(playNowHeroBtn.closest("section"));
+        showPlayNowModal(modal, playNowHeroBtn.closest("section"));
     });
 }
 
@@ -175,7 +179,7 @@ if (raceLearnLoreBtn) {
     raceLearnLoreBtn.addEventListener("click", () => {
         const race = raceDetails[selectedRace];
         if (race) {
-            showModal(`
+            showModal(modal, `
                 <button id="closeModal">\u2715</button>
                 <h2>${race.name}</h2>
                 <p>${race.lore}</p>
@@ -185,9 +189,11 @@ if (raceLearnLoreBtn) {
 }
 
 if (raceList) {
-    const firstRace = raceList.querySelector("[data-race]");
+    const orderedRaceKeys = Array.from(raceList.querySelectorAll("[data-race]")).map((item) => item.getAttribute("data-race"));
+    const firstKey = orderedRaceKeys.find((key) => raceDetails[key]) || Object.keys(raceDetails)[0];
+    const firstRace = raceList.querySelector(`[data-race="${firstKey}"]`);
     if (firstRace) {
-        selectedRace = firstRace.getAttribute("data-race") || "norn";
+        selectedRace = firstKey;
         setRaceCover(selectedRace);
         firstRace.classList.add("selected");
     }
@@ -244,7 +250,7 @@ if (professionLearnMoreBtn) {
     professionLearnMoreBtn.addEventListener("click", () => {
         const prof = professionDetails[selectedProfession];
         if (prof) {
-            showModal(`
+            showModal(modal, `
                 <button id="closeModal">\u2715</button>
                 <h2>${prof.name}</h2>
                 <p>${prof.description}</p>
@@ -254,9 +260,11 @@ if (professionLearnMoreBtn) {
 }
 
 if (professionList) {
-    const firstProf = professionList.querySelector("[data-profession]");
+    const orderedProfKeys = Array.from(professionList.querySelectorAll("[data-profession]")).map((item) => item.getAttribute("data-profession"));
+    const firstKey = orderedProfKeys.find((key) => professionDetails[key]) || Object.keys(professionDetails)[0];
+    const firstProf = professionList.querySelector(`[data-profession="${firstKey}"]`);
     if (firstProf) {
-        selectedProfession = firstProf.getAttribute("data-profession") || "necromancer";
+        selectedProfession = firstKey;
         setProfessionCover(selectedProfession);
         firstProf.classList.add("selected");
     }
@@ -297,7 +305,7 @@ const findOutMoreBtn = document.getElementById("find-out-more");
 if (findOutMoreBtn) {
     const findOutMoreSection = findOutMoreBtn.closest("section");
     findOutMoreBtn.addEventListener("click", () => {
-        showModal(`
+        showModal(modal, `
             <button id="closeModal">\u2715</button>
             <h2>Find Out More</h2>
             <p><em>Some reasons from my first Character: Syavirnah</em></p>
@@ -308,7 +316,7 @@ if (findOutMoreBtn) {
         if (playNowFromStory) {
             playNowFromStory.addEventListener("click", () => {
                 modal.close();
-                showPlayNowModal(findOutMoreSection);
+                showPlayNowModal(modal, findOutMoreSection);
             });
         }
     });
@@ -317,7 +325,8 @@ if (findOutMoreBtn) {
 const playNowBottomBtn = document.getElementById("play-now-bottom");
 if (playNowBottomBtn) {
     playNowBottomBtn.addEventListener("click", () => {
-        showPlayNowModal(playNowBottomBtn.closest("section"));
+        showPlayNowModal(modal, playNowBottomBtn.closest("section"));
     });
 }
 
+}
