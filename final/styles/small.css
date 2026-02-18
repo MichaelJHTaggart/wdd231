@@ -76,6 +76,82 @@ section {
 
 }
 
+.attributions-section,
+.guild-section,
+.resources-section {
+    height: auto;
+    overflow: visible;
+    padding: 1.5rem;
+}
+
+.attributions-section h1,
+.guild-section h1,
+.resources-section h1 {
+    margin-bottom: 1.5rem;
+}
+
+.attributions-section ul,
+.guild-section ul,
+.resources-section ul {
+    text-align: left;
+    max-width: 80ch;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.attributions-section li,
+.guild-section li,
+.resources-section li {
+    color: var(--color-text-primary);
+}
+
+form {
+    display: grid;
+    gap: 1rem;
+    padding: 1rem 0;
+    max-width: 40rem;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.form-group {
+    display: grid;
+    margin-bottom: 0.5rem;
+}
+
+form label {
+    color: var(--color-text-primary);
+    margin-bottom: 0.25rem;
+    text-align: left;
+}
+
+form input[type="text"],
+form textarea {
+    background-color: var(--color-bg-main);
+    border: 1px solid var(--color-border-subtle);
+    color: var(--color-text-primary);
+    padding: 0.5rem 0.75rem;
+    border-radius: 0.25rem;
+    font-family: var(--font-body);
+    font-size: 1rem;
+}
+
+form textarea {
+    min-height: 6rem;
+    resize: vertical;
+}
+
+.thankyou-main > h1 {
+    text-align: center;
+    padding: 2rem 0;
+}
+
+#form-submission-info {
+    color: var(--color-text-primary);
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
 p {
     color: var(--color-text-primary);
     max-width: 80ch;
