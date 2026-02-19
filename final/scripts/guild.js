@@ -5,15 +5,19 @@ const EMBLEM_BASE_URL = 'https://emblem.werdes.net/emblem';
 const guildDisplay = document.querySelector('#guild-display');
 
 export async function getGuildData() {
-    const accountResponse = await fetch(ACCOUNT_URL);
-    const accountData = await accountResponse.json();
+    try {
+        const accountResponse = await fetch(ACCOUNT_URL);
+        const accountData = await accountResponse.json();
 
-    const guildId = accountData.guilds[0];
-    const guildResponse = await fetch(`${GUILD_BASE_URL}/${guildId}?access_token=${API_KEY}`);
-    const guildData = await guildResponse.json();
+        const guildId = accountData.guilds[0];
+        const guildResponse = await fetch(`${GUILD_BASE_URL}/${guildId}?access_token=${API_KEY}`);
+        const guildData = await guildResponse.json();
 
-    const emblemUrl = `${EMBLEM_BASE_URL}/${guildData.id}`;
-    displayGuild(guildDisplay, guildData.name, guildData.tag, guildData.motd, emblemUrl);
+        const emblemUrl = `${EMBLEM_BASE_URL}/${guildData.id}`;
+        displayGuild(guildDisplay, guildData.name, guildData.tag, guildData.motd, emblemUrl);
+    } catch (error) {
+        console.error(error);
+    }
 }
 
 function displayGuild(container, name, tag, motd, emblemUrl) {
